@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*reset*/
+/*new resume*/
+.banner{background:url(../images/newBanner.png) no-repeat center center;height:278px;}
+.main .inner{background:url(../images/main_bg.jpg) repeat-y left top;}
+.main .location{background: url(../images/h_bg.png) no-repeat left top;position: relative;height:97px;}
+.main .location h1{line-height: 97px;color: #ff7900;padding-left:8px;}
+.main .location span{position: absolute;right:0;top:0;color:#ccc;}
+.main .location span a{color:#888;}
+.main .fr{width:757px;padding-right:20px;}
+.main .menu{width:177px;color:#fff;position:relative;left:-11px;}
+.main .menu h2{padding:0 0 0 18px;background:#f6901b url(../images/menu_bg_03.png) no-repeat 133px center;);line-height: 57px;border-top:2px solid #dd7314;border-bottom:1px solid #fac04f;}
+.main .menu a{color:#fff;}
+.main .menu ul{background:#262835 url(../images/menu_bg_07.jpg) no-repeat bottom left;}
+.main .menu li{border-bottom:#373948 1px solid;line-height: 28px;padding-left:17px;}
+.main .menu .lastli{border:none;}
+.main .menu .ad{position:absolute;left:20px;color:#000;text-align: center;}
+.main-bot{padding-bottom:57px;}
+.marb{margin-right:22px;margin-top:34px;}
+.main .main-bot ul li{height:30px;border-bottom:1px dotted #ccc;}
+.main .main-bot ul li span{float:right;line-height: 30px;}
+.main .main-bot ul li a{line-height:30px;color:#585858;}
+.main .main-bot ul li a img{margin:0px 8px 0px 12px;}
+.new_dl{float:right;margin:25px 34px 0px 0px;}
+.new_dl dd{float:left;width:32px;height:28px;text-align: center;border:1px solid #ccc;border-right:0;}
+.new_dl dd a{line-height: 28px;color:#ff7900;}
+.padBor{border:3px solid #ccc;margin-top:29px;padding-top:0px;padding-bottom:17px;margin-bottom:17px;}
+.main .main-bot table input{border:1px solid #ccc;width:130px;height:26px;text-align: right;}
+.main .main-bot table tr{line-height: 45px;}
+.main .main-bot table tr td span{width:66px;text-align: right;display:inline-block;margin-right:8px;}
+.main .main-bot table tr td b{margin:0 5px;position:relative;top:-3px;}
+.main .main-bot table tr td i{color:#ff7900;margin-left:5px;}
+.main .main-bot table tr td select{width:111px;height:26px;}
+.main .main-bot table textarea{width:570px;height:63px;}
+.main .main-bot .ft{float:right;margin-right:30px;}
+.main .main-bot .ft span{margin-right:17px;}
+.main .main-bot .ft span i{color:#ff7900;margin:0px 8px;}

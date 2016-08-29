@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+header .header-bot h2{line-height:100px;}
+
+.section1{text-align:center;padding:90px 0 109px;}
+.section1 .ul1{display:inline-block;}
+.section1 .ul1 li{float:left;border-radius:5px;border:#0078a4 4px solid;transition:all 1s;margin-right:18px;}
+.section1 .ul1 a{font-size:22px;height:52px;line-height:52px;transition:all 1s;color:#0078a4;padding:0 25px;}
+.section1 .ul1 li:hover{background:#0078a4;}
+.section1 .ul1 li:hover a{color:#fff;}
+
+.section1 .ul2{margin-top:32px;padding:0 3%;}
+.section1 .ul2 li{width:30%;position:relative;cursor:pointer;margin-right:5%;margin-bottom:33px;}
+.section1 .ul2 li:nth-child(3){margin-right:0;}
+.section1 .ul2 li:nth-child(6){margin-right:0;}
+.section1 .ul2 li:nth-child(9){margin-right:0;}
+.section1 .ul2 li{float:left;}
+.section1 .ul2 li .gz{width:100%;height:100%;background:rgba(0,120,164,0);position:absolute;left:0;top:0;color:#fff;transition:all 1s;border-radius:5px;}
+.section1 .ul2 li .gz .light{width:23px;height:33px;position:absolute;left:50%;top:0;transition:all 1s;opacity:0;transform:translateX(-50%);}
+.section1 .ul2 li .gz p{position:absolute;left:50%;bottom:0;transition:all 1s;opacity:0;transform:translateX(-50%);}
+.section1 .ul2 li:hover .gz{background:rgba(0,120,164,0.75);}
+.section1 .ul2 li:hover .light{top:40%;opacity:1;}
+.section1 .ul2 li:hover p{bottom:40%;opacity:1;}
+.section1 .ul2 img{width:100%;display:block;}

@@ -1,0 +1,29 @@
+<ion-view>
+    <ion-nav-title>成都焊金金毛俱乐部</ion-nav-title>
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新！" pulling-icon="icon ion-fork" on-refresh="refresh()"></ion-refresher>
+        <div ng-repeat="puppy in puppys" class="list card">
+            <div class="item item-avatar">
+                <img ng-src="{{puppy.image}}"/>
+                <h2>{{puppy.name}}</h2>
+                <p>{{puppy.birth}}</p>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" ng-src="{{puppy.image}}">
+                <p>
+                    <a class="subdued">{{puppy.like}} 喜欢</a>
+                </p>
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" ng-click="add($index)">
+                    <i class="icon ion-heart"></i> 喜欢
+                </a>
+                <a class="tab-item">
+                    <i class="icon ion-share"></i> 分享
+                </a>
+            </div>
+        </div>
+        <ion-infinite-scroll on-infinite="infinite()" immediate-check="false" ng-if="page<3">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

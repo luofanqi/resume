@@ -1,0 +1,65 @@
+<ion-view class="dark-bg">
+    <ion-nav-title>成都焊金金毛俱乐部</ion-nav-title>
+    <ion-content>
+        <ion-slide-box auto-play="true" does-continue="true" slide-interval="1500">
+            <ion-slide>
+                <div class="homeslide"><img ng-src="images/jessica.jpg"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="homeslide"><img ng-src="images/jessica4.jpg"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="homeslide"><img ng-src="images/jessica6.jpg"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="homeslide"><img ng-src="images/jessica10.jpg"></div>
+            </ion-slide>
+        </ion-slide-box>
+        <ion-refresher pulling-text="下拉刷新！" pulling-icon="icon ion-fork" on-refresh="refresh()"></ion-refresher>
+        <div class="button-bar">
+            <a class="button">JESSICA</a>
+            <a class="button">PRINCE</a>
+            <a class="button">DANA</a>
+        </div>
+        <ion-list>
+            <ion-item class="item-image">
+                <img ng-src="images/wangzi4.jpg">
+            </ion-item>
+            <ion-item ui-sref="tabs.page{{$index+1}}" class="item-thumbnail-left" ng-repeat="item in startitems">
+                <img ng-src="{{item.img}}">
+                <h2>{{item.title}}</h2>
+                <p>{{item.p}}</p>
+                <ion-option-button class="button-positive" ng-click="">分享</ion-option-button>
+            </ion-item>
+        <span ng-show="toggle">
+            <ion-item ng-repeat="item in items">
+                <p>{{item.p}}</p>
+                <ion-option-button class="button-positive" ng-click="">分享</ion-option-button>
+            </ion-item>
+            <ion-infinite-scroll on-infinite="infinite()" immediate-check="false"  ng-if="toggle && page<3"></ion-infinite-scroll>
+        </span>
+        </ion-list>
+        <button class="button button-outline button-light" ng-click="more()">{{icon}}</button>
+        <div class="white row responsive-break" ng-show="!toggle">
+            <div class="col" style="width: 100%">
+                <div class="item-image">
+                    <img ng-src="images/dana4.jpg">
+                    <p>DANA赛场风采</p>
+                </div>
+            </div>
+            <div class="col" style="width: 100%">
+                <div class="item-image">
+                    <img ng-src="images/dana5.jpg">
+                    <p>DANA赛场风采</p>
+                </div>
+            </div>
+            <div class="col" style="width: 100%">
+                <div class="item-image">
+                    <img ng-src="images/dana6.jpg">
+                    <p>DANA赛场风采</p>
+                </div>
+            </div>
+        </div>
+        <div style="border-radius:2%;overflow: hidden"><img style="width:100%;height:70%" ng-src="images/winner.png"></div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:1287px){
+	body,html{width:100%;}
+	.inner{width:100%;}
+	}
+	
+@media screen and (max-width:980px){
+	header .header-top nav{display:none;}
+	.mobnav{display:block;}
+	}
+	
+@media screen and (max-width:768px){
+	.section1 .ul1{width:100%;}
+	.section1 .ul1 li{float:none;width:98%;margin-bottom:10px;}
+	.section1 .ul2{padding:0 15%;}
+	.section1 .ul2 li{float:none;width:100%;margin-right:0;}
+	footer .box{float:none;width:100%;text-align:center;}
+	footer .box ul{display:inline-block;}
+	}

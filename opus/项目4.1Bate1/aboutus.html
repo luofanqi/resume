@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <title>图文展示</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=Mbh8YWwApO5bBGlCWFQeRjpVLisDQcVS"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header_left">
+        <a href="javascript:history.back(-1)"><img src="images/header_bg_03.jpg"></a>
+    </div>
+    <h2>了解我们</h2>
+    <div class="header_right">
+        <a href="index.html"><img src="images/header_bg_05.jpg"></a>
+    </div>
+</div>
+<ul class="nav">
+    <li class="ac"><a href="#">公司新闻</a></li>
+    <li><a href="#">办公环境</a></li>
+</ul>
+<div class="main">
+    <div class="main_center">
+        <div class="picMAP">
+            <div id="allmap"></div>
+            <ul class="address">
+                <li>
+                    <h2>运营中心地址：北京市北四环西路58号理想国际大厦8层</h2>
+                    <div class="phone">
+                        <p>邮编: 100080</p>
+                        <p>总机：（+86）010-82607183</p>
+                        <p>传真：（+86）010-82607178</p>
+                        <p>北京研发中心：（+86）010-82607183-8116</p>
+                    </div>
+                </li>
+                <li>
+                    <h2>总部基地地址：四川省成都市高新区九兴大道16号迈普大厦</h2>
+                    <div class="phone">
+                        <p>邮编: 610041</p>
+                        <p>总机：(+86) 028-85148048</p>
+                        <p>传真：(+86) 028-85148948</p>
+                        <p style="margin-bottom:0.35rem;">成都研发中心：(+86) 028-65544998</p>
+                        <p>销售热线</p>
+                        <p>电话：(+86) 028-85148880</p>
+                    </div>
+                </li>
+                <li>
+                    <h2>迈普科技园(迈普工厂）地址：成都市高新西区西芯大道22号</h2>
+                    <div class="phone">
+                        <p>电话：(+86) 028-85148048转7116</p>
+                        <p>维修组联系人：胡挺 </p>
+                        <p>维修组联系电话:（+86）028-87827013</p>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="mgb"><a href="#">点击察看办事处>></a></h2>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <ul>
+        <li>
+            <a href="index.html">
+                <div>
+                    <img src="images/footer_bg_06.jpg">
+                </div>
+                <span>首页/Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:history.back(-1)">
+                <div>
+                    <img src="images/footer_bg_09.jpg">
+                </div>
+                <span>返回/Return</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");    // 创建Map实例
+    map.centerAndZoom("成都", 10);  // 初始化地图,设置中心点坐标和地图级别
+    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+    map.setCurrentCity("成都市");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>

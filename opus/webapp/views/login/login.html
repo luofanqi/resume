@@ -1,0 +1,17 @@
+<ion-view hide-back-button="true">
+    <ion-nav-title>请登录</ion-nav-title>
+    <ion-content>
+            <div class="list list-inset">
+                <div class="item item-input-inset">
+                    <label class="input-label col-20">账号：</label>
+                    <input type="email" ng-model="data.email" placeholder="请输入Email账号">
+                </div>
+                <div class="item item-input-inset">
+                    <label class="input-label col-20">密码：</label>
+                    <input type="password" ng-model="data.password" ng-minlength="6" placeholder="请输入密码">
+                </div>
+                <button class="button button-calm button-block" ui-sref="tabs.home" ng-disabled="!data.email || !data.password" ng-click="show()">登录</button>
+                <button class="button button-calm button-block" ng-click="toRegister()">注册</button>
+            </div>
+    </ion-content>
+</ion-view>

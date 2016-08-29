@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>投递简历</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/angular.min.js"></script>
+    <script src="js/style.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header_left">
+        <a href="javascript:history.back(-1)"><img src="images/header_bg_03.jpg"></a>
+    </div>
+    <h2>投递简历</h2>
+    <div class="header_right">
+        <a href="index.html"><img src="images/header_bg_05.jpg"></a>
+    </div>
+</div>
+<div class="main">
+    <div class="main_top"></div>
+    <div class="main_center" ng-app="myapp" ng-controller="ganweiCtrl">
+        <div class="base_mes">
+            <form name="myForm" novalidate>
+                <div class="jianli">
+                    <div>
+                        <span>姓名:</span>
+                        <input type="text" required name="name" ng-model="name">
+                        <i class="error" ng-show="myForm.name.$error.required && myForm.name.$dirty">请输入姓名</i>
+                    </div>
+                    <div>
+                        <span>性别:</span>
+                        <input type="text" required name="sex" ng-model="sex">
+                        <i class="error" ng-show="myForm.sex.$error.required && myForm.sex.$dirty">请输入性别</i>
+                    </div>
+                    <div>
+                        <span>年龄:</span>
+                        <input type="text" required name="year" ng-model="year">
+                        <i class="error" ng-show="myForm.year.$error.required && myForm.year.$dirty">请输入年龄</i>
+                    </div>
+                </div>
+                <div class="main_id">
+                    <div>
+                        <span>身份证号:</span>
+                        <input type="text"  required name="id" ng-model="id">
+                        <i class="error" ng-show="myForm.id.$error.required && myForm.id.$dirty">请输入身份证号</i>
+                    </div>
+                    <div>
+                        <span>手机号:</span>
+                        <input type="tel" required name="tel"  ng-model="tel">
+                        <i class="error" ng-show="myForm.tel.$error.required && myForm.tel.$dirty">请输入手机号</i>
+                    </div>
+                    <div>
+                        <span>邮箱:</span>
+                        <input type="email" required name="email" ng-model="email">
+                        <i class="error" ng-show="myForm.email.$error.required && myForm.email.$dirty">请输入正确邮箱</i>
+                    </div>
+                    <div>
+                        <label>工作经历，应聘岗位:</label>
+                        <textarea rows="4" required name="work" ng-model="work"></textarea>
+                        <i class="error" ng-show="myForm.work.$error.required && myForm.work.$dirty">请输入岗位</i>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="shenqing tc">
+            <button ng-disabled="myForm.$invalid">我要申请</button>
+            <button>我要推荐</button>
+        </div>
+    </div>
+
+</div>
+<div class="footer">
+    <ul>
+        <li>
+            <a href="index.html">
+                <div>
+                    <img src="images/footer_bg_06.jpg">
+                </div>
+                <span>首页/Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:history.back(-1)">
+                <div>
+                    <img src="images/footer_bg_09.jpg">
+                </div>
+                <span>返回/Return</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

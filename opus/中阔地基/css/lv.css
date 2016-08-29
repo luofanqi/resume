@@ -1,0 +1,40 @@
+@charset "utf-8";
+/*reset*/
+
+
+/*banner*/
+.banner{height:278px;background:url(../images/bg_02.jpg) no-repeat center center #4b4b4b;border-bottom:1px #cbcbcb solid;}
+
+/*main*/
+.main .inner{background:url(../images/main_bg.jpg) repeat-y left top;}
+.main .location{background: url(../images/h_bg.png) no-repeat center center;position: relative;height:97px;margin-top:57px;margin-right:14px;}
+.main .location h1{line-height: 97px;color: #ff7900;padding-left:8px;}
+.main .location span{position: absolute;right:0;top:0;color:#ccc;}
+.main .location span a{color:#888;}
+.circle{float:left;width:10px;height:10px;border-radius:50%;border:2px solid;margin-right:6px;}
+.main .main-bot .chicken{height:495px;padding-top:75px;background:url(../images/chicken.png) no-repeat center center #f4f4f4;position: relative;margin-bottom: 93px;}
+.main .main-bot .chicken .text ul li{display:inline-block;color:#585858;margin-right:20px;}
+.main .main-bot .chicken .text{position: absolute;left:39px;top:456px;}
+.main .main-bot .chicken .text p{color:#585858;line-height:24px;margin:10px 0;}
+.main .main-bot .chicken .introduce{width:639px;border:1px #ccc solid;border-radius:5px;margin:0 auto;position: relative;background: #fff;padding-bottom:15px;}
+.main .main-bot .chicken .introduce h1{line-height:48px;color:#ff7900;margin-left:20px;}
+.main .main-bot .chicken .introduce .quit{position: absolute;right: 8px;top:13px;}
+.main .main-bot .chicken .introduce .line{position: absolute;right: 11px;top:57px;}
+.main .main-bot .chicken .introduce .thing{width:580px;border-top:1px solid #ff7900;padding-top:19px;margin-left:20px;}
+.main .main-bot .chicken .introduce .thing ul li{float:left;margin-right:20px;}
+.main .main-bot .chicken .introduce .thing ul li img{border:1px solid #e8e8e8;padding:3px;}
+.main .main-bot .chicken .introduce .thing ul li a{color:#585858;}
+.main .main-bot .chicken .introduce .thing ul li p{margin-top:15px;}
+.main .main-bot .ipt{border:1px #dadada solid;border-bottom:3px #dadada solid;margin:45px 0 206px;}
+.main .main-bot .ipt form{width:324px;margin:0 auto;padding-top:24px;position: relative;}
+.main .main-bot .ipt form p{line-height:42px;}
+.main .main-bot .ipt form span{position: absolute;left:148px;top:193px;}
+.main .main-bot .ipt form span a{position:relative;left:10px;top:-5px;}
+.main .main-bot .ipt form input{width:321px;height:26px;border: 1px #c8c8c8 solid;background: #f4f4f4;padding-left:10px;}
+.main .main-bot .ipt .button{width:124px;height:24px;border:1px #c8c8c8 solid;border-radius:4px;background:#dcee06;position: relative;margin:33px 0 36px;}
+.main .main-bot .ipt .button p{margin-left:39px;line-height:24px;}
+.main .main-bot .ipt .button .sj{position: absolute;right:9px;top:5px;}
+.main .main-bot .statement_text{margin-bottom:29px;padding:0 20px}
+.main .main-bot .statement_text ul{border-bottom:1px #ccc dotted;padding-bottom:23px;}
+.main .main-bot .statement_text h2{font-size:14px;line-height:24px;color:#ff7900;margin-top:26px;}
+.main .main-bot .statement_text p{line-height:24px;color:#585858;}

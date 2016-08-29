@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天气查询</title>
+    <style>
+        *{margin:0;padding:0}
+        li{list-style:none;color: #666666;font-weight:bold;text-shadow: 0 0 15px #fff,0 0 15px #fff,0 0 15px #fff,0 0 15px #fff,0 0 15px #fff,0 0 15px #fff,0 0 15px #fff,0 0 15px #fff;margin-bottom:10px}
+        .main{border-radius:20px;width:550px;margin:200px auto;border:1px solid #000;padding:20px;background:url(weather/day.gif) no-repeat center center;background-size:cover;}
+        .main .sle{margin:20px 0 20px 90px;}
+        .weather p{background:rgba(0,0,0,0.2);color:#fff;padding:10px;text-shadow: 0 0 15px #fff,0 0 15px #fff,0 0 15px #fff;}
+        .weather ul{float:left;padding:10px;width:90px;}
+        .weather .hide{display:none;}
+        .weather .show{display:block;}
+        .clear{clear:both;}
+    </style>
+    <script src="js/ajaxtool.js"></script>
+    <script>
+        window.onload = function () {
+            //--------------select创建option---------------------
+            var cityArr=['北京','天津','上海','重庆','石家庄','太原','呼和浩特','哈尔滨','长春','沈阳','济南','南京','合肥','杭州','南昌','福州','郑州','武汉','长沙','广州','南宁','西安','银川','兰州','西宁','乌鲁木齐','成都','贵阳','昆明','拉萨','海口']
+            var oSle=document.getElementById('sle');
+            for(var i=0;i<cityArr.length;i++){
+                var opt=document.createElement('option');
+                opt.innerHTML=cityArr[i];
+                oSle.appendChild(opt);
+            };
+            //document.getElementById('city').value=oSle.value;
+            oSle.onchange=function(){
+                document.getElementById('city').value=oSle.value;
+            };
+            //-------------------获取天气数据----------------------------
+            var timer=null;
+            document.getElementById('btn').onclick = function () {
+                clearTimeout(timer);
+                document.getElementById('weather').innerHTML='<img style="margin-left:150px" id="load" class="hide" src="weather/ajax-loader.gif">';
+                document.getElementById('load').className='show';
+                var url='http://wthrcdn.etouch.cn/weather_mini?city='+(document.getElementById('city').value || oSle.value);
+                $.getJson(url,showData);
+            };
+            function showData(data){
+                timer=setTimeout(function(){
+                    document.getElementById('load').className='hide';
+                    var oWeather=document.getElementById('weather');
+                    oWeather.innerHTML='<img style="margin-left:150px" id="load" class="hide" src="weather/ajax-loader.gif"><p style="text-align:center;font-size:20px;font-weight:bold">'+data.data.city+'，'+data.data.wendu+'℃</p><p style="margin-bottom:20px">感冒指数：'+data.data.ganmao+'</p>';
+                    for(var i= 0;i<data.data.forecast.length;i++){
+                        var oUl=document.createElement('ul');
+                        oUl.innerHTML='<li>'+data.data.forecast[i].date+'</li><li>'+data.data.forecast[i].fengxiang+'</li><li>'+data.data.forecast[i].fengli+'</li><li>'+data.data.forecast[i].high+'</li><li>'+data.data.forecast[i].low+'</li><li>'+data.data.forecast[i].type+'</li>';
+                        oWeather.appendChild(oUl);
+                    };
+                    //-------------------加图片-------------------------------------
+                    var ali=oWeather.getElementsByTagName('li');
+                    var picArr=['晴','多云','阴','阵雨','雷阵雨','雷阵雨并伴有冰雹','雨加雪','小雨','中雨','大雨','暴雨','大暴雨','特大暴雨','阵雪','小雪','中雪','大雪','暴雪','雾','冻雨','沙尘暴','小到中雨','中到大雨','大到暴雨','暴到大暴雨','大暴到特大暴雨','小雪-中雪','中雪-大雪','大雪-暴雪','浮尘','扬沙','强沙尘暴']
+                    for(var i=0;i<ali.length;i++) {
+                        (function () {
+                            for(var j=0;j<31;j++){
+                                switch(ali[i].innerHTML){
+                                    case  picArr[j]:
+                                        ali[i].parentNode.style.background = 'url(weather/a_'+j+'.gif) no-repeat center center rgba(0,0,0,0.2)';
+                                        break;
+                                };
+                            };
+                        })();
+                    };
+                },1000);
+            };
+        }
+    </script>
+</head>
+<body>
+<div class="main">
+    <select id="sle" class="sle"></select>
+    <input type="text" id="city" placeholder="其他城市查询请输入">
+    <button type="button" id="btn">查询</button>
+    <div id="weather" class="weather"><img style="margin-left:150px" id="load" class="hide" src="weather/ajax-loader.gif"></div>
+    <div class="clear"></div>
+</div>
+
+</body>
+</html>

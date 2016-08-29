@@ -1,0 +1,39 @@
+<ion-view>
+    <ion-nav-title>请注册</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button icon ion-refresh" ng-click="clear()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <form name="registerForm" class="list list-inset" novalidate>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper col-90">
+                    <input type="email" name="email" placeholder="请输入Email账号" ng-model="dataForm.email" required>
+                </label>
+                <i class="icon ion-checkmark balanced" ng-show="registerForm.email.$dirty && registerForm.email.$valid"></i>
+                <i class="icon ion-close assertive" ng-show="registerForm.email.$dirty && registerForm.email.$invalid"></i>
+            </div>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper col-90">
+                    <input type="password" name="password" placeholder="请输入不小于6位密码" ng-minlength="6" ng-model="dataForm.password" required>
+                </label>
+                <i class="icon ion-checkmark balanced" ng-show="registerForm.password.$dirty && registerForm.password.$valid"></i>
+                <i class="icon ion-close assertive" ng-show="registerForm.password.$dirty && registerForm.password.$invalid"></i>
+            </div>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper col-90">
+                    <input type="text" name="name" placeholder="请输入name" ng-model="dataForm.name" required>
+                </label>
+                <i class="icon ion-checkmark balanced" ng-show="registerForm.name.$dirty && registerForm.name.$valid"></i>
+                <i class="icon ion-close assertive" ng-show="registerForm.name.$dirty && registerForm.name.$invalid"></i>
+            </div>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper col-90">
+                    <input type="tel" name="tel" placeholder="请输入11位手机号码" ng-minlength="11" ng-maxlength="11" ng-model="dataForm.tel" required>
+                </label>
+                <i class="icon ion-checkmark balanced" ng-show="registerForm.tel.$dirty && registerForm.tel.$valid"></i>
+                <i class="icon ion-close assertive" ng-show="registerForm.tel.$dirty && registerForm.tel.$invalid"></i>
+            </div>
+        </form>
+        <button class="button button-calm button-block" ng-disabled="registerForm.$invalid" ng-click="toLogin()">注册</button>
+    </ion-content>
+</ion-view>

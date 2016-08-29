@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+header .header-bot h2{line-height:100px;}
+.wrap article{width:65%;float:left;}
+.wrap article img{display:block;width:100%;}
+.wrap article .box{border-bottom:1px solid #ebebeb;padding:110px 0 55px;}
+.wrap article .box div{margin-bottom:36px;}
+.wrap article h2 a{color:#515151;font-size:30px;}
+.wrap article h2 a:hover{color:#0078A4;}
+.wrap article time{color:#0078a4;}
+.wrap article time span{font-weight:bold;color:#515156;}
+.wrap article time a{color:#0078a4;}
+.wrap article time a:hover{color:#A5A5A5;}
+.wrap article p{margin-bottom:36px;}
+.wrap article h3{text-align:center;line-height:52px;border-radius:5px;background:#0078a4;width:200px;transition:all 1s;cursor:pointer;}
+.wrap article h3 a{color:#fff;}
+.wrap article h3:hover{background:#000;}
+.wrap .footicons{width:56px;height:56px;text-align:center;line-height:56px;background:#0078a4;border-radius:5px;margin:50px 2px 50px 0;transition:all 1s;}
+.wrap .lefticon1{background:#000;}
+.wrap .lefticon{float:left;}
+.wrap .righticon{float:right;}
+.wrap .footicons a{display:inline-block;width:56px;height:56px;font-family:consolas;font-weight:bold;color:#fff;}
+.wrap .footicons:hover{background:#000;}
+
+.wrap aside{width:32%;float:right;}
+.wrap aside dt{font-weight:bold;font-size:28px;margin:40px 0 20px;}
+.wrap aside dd{font-size:20px;line-height:56px;border-bottom:1px solid #ebebeb;}
+.wrap aside dd i{margin-right:22px;}
+.wrap aside dd span a{color:#0078a4;font-size:16px;line-height:20px;}
+.wrap aside dd span a:hover{color:#A5A5A5;}
+.wrap aside dd a:hover{color:#0078a4;}
+.wrap aside .dl3 dd{border-bottom:0;width:87px;height:87px;float:left;margin:0 4px 4px 0;transition:all 0.5s;}
+.wrap aside .dl3 img{display:block;width:100%;height:100%;transition:all 0.5s;}
+.wrap aside .dl3 dd:hover{box-shadow:0 0 0 7px #0078a4 inset;}
+.wrap aside .dl3 dd:hover img{transform:scale(0.75);}

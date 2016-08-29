@@ -1,0 +1,27 @@
+<div class="panel panel-default row" ng-controller="listCtrl">
+    <div class="col-xs-3">
+        <!--商品类别放这里-->
+        <a class="btn btn-block btn-default btn-lg" ng-click="selectCategory(null)">首页</a>
+        <!--生成导航元素-->
+        <a class=" btn btn-block btn-default btn-lg" ng-repeat="category in data.categories" ng-click="selectCategory(category.category)" ng-class="clickClass(category.category)">
+            {{category.category}}
+        </a>
+    </div>
+
+    <div class="col-xs-8">
+        <!--产品信息放这里-->
+        <div class="well" ng-repeat="product in data.products | filter:showProduct | pageFilter:currentPage:pageSize">
+            <h3>
+                <strong>{{product.name}}</strong>
+                <span class="pull-right label label-primary">{{product.price | currency:"RMB ￥"}}</span>
+            </h3>
+            <button class="btn btn-success btn-sm pull-right" ng-click="addToCart(product)">加入购物车</button>
+            <img ng-src="{{product.url}}" style="padding-right: 10px;"/><span class="lead">{{product.description}}</span>
+        </div>
+
+        <!--分页导航按钮-->
+        <div class="pull-right btn-group">
+            <a class="btn btn-default"  ng-repeat="page in data.products | filter:showProduct | numBtnFilter:pageSize" ng-click="changePage(page)" ng-class="clickClassNum(page)">{{page}}</a>
+        </div>
+    </div>
+</div>

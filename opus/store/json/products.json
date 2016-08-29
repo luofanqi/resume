@@ -1,0 +1,7 @@
+[
+  {"name":"杂酱面","description":"这是江帆特制杂酱面","category":"小吃","price":"9999","url":"images/zjm.jpg"},
+  {"name":"眼泪包饭","description":"这是加入了江帆的眼泪的米其林三星级炒饭","category":"小吃","price":"8888","url":"images/jftear.jpg"},
+  {"name":"江帆的午餐","description":"一年仅此一次的午餐，能和业界翘楚江帆共进午餐","category":"小吃","price":"25000000","url":"images/jfdwc.jpg"},
+  {"name":"足球鞋","description":"这是鞋子","category":"运动鞋","price":"1200","url":"images/zqx.jpg"},
+  {"name":"FLOW","description":"这是全能板","category":"单板","price":"5000","url":"images/flow.jpg"}
+]

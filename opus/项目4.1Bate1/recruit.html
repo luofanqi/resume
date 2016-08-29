@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>apply for</title>
+   	<link rel="stylesheet" href="css/base.css" />
+    <script src="js/angular.min.js"></script>
+    <script src="js/style.js"></script>
+</head>
+<body>
+<div class="header">
+    	<div class="header_left">
+    		<a href="javascript:history.back(-1)"><img src="images/header_bg_03.jpg"></a>
+    	</div>
+    	<h2>招聘岗位</h2>
+    	<div class="header_right" >
+    		<a href="index.html"><img src="images/header_bg_05.jpg"></a>
+    	</div>	
+</div>
+<div class="main">
+	<div class="main_top"></div>
+		<div class="main_center" ng-app="myapp" ng-controller="applyCtrl">
+			<div class="base_mes">
+	    		<form name="myForm" novalidate>
+			        <div class="main_id">
+	                    <div>
+	                        <span>岗位名称:</span>
+	                        <input type="text"  required name="work" ng-model="work">
+	                        <i class="error" ng-show="myForm.work.$error.required && myForm.work.$dirty">请输入岗位</i>
+	                    </div>
+	                    <div>
+	                        <span>职位描述:</span>
+	                        <input type="tel" required name="job"  ng-model="job">
+	                        <i class="error" ng-show="myForm.job.$error.required && myForm.job.$dirty">请输入描述</i>
+	                    </div>
+	                    <div>
+	                        <span>工作地点:</span>
+	                        <input type="email" required name="addwork" ng-model="addwork">
+	                        <i class="error" ng-show="myForm.addwork.$error.required && myForm.addwork.$dirty">请输入工作地点</i>
+	                    </div>
+	                    <div>
+	                        <label>推荐悬赏:</label>
+	                        <textarea rows="4" required name="recommend" ng-model="recommend"></textarea>
+	                        <i class="error" ng-show="myForm.recommend.$error.required && myForm.recommend.$dirty">不能为空</i>
+	                    </div>
+	                </div>
+	    		</form>
+	    	</div>
+		   		<div class="shenqing tc">
+	            	<button ng-disabled="myForm.$invalid">我要申请</button>
+	            	<button>我要推荐</button>
+	        	</div>
+	    </div>
+    </div>
+<div class="footer">
+    		<ul>
+    		<li>
+    			<a href="index.html">
+	    			<div>
+	    				<img src="images/footer_bg_06.jpg">
+	    			</div>
+	    			<span>首页/Home</span>
+    			</a>
+    		</li>
+    		<li>
+    			<a href="javascript:history.back(-1)">
+	    			<div>
+	    				<img src="images/footer_bg_09.jpg">
+	    			</div>
+	    			<span>返回/Return</span>
+    			</a>
+    		</li>
+    		</ul>
+</div>   
+</body>
+</html>

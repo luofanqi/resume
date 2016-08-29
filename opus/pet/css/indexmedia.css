@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:1134px){
+	html,body{width:100%;}
+	.inner{width:100%;}
+	}
+	
+@media screen and (max-width:980px){
+	nav{display:none;}
+	.mobnav{display:block;}
+	.clearbg{width:90%;}
+	}
+
+@media screen and (max-width:768px){
+	.box2 .inner{padding:81px 10%;}
+	.box2 .inner li{width:40%;}
+	}
+	
+@media screen and (max-width:640px){
+	header form .search{width:60px;}
+	.box1 .inner h2{font-size:16px;}
+	.box1 .inner .left{width:90%;margin:0 5%;}
+	.box1 .inner .p1{width:96%;}
+	.box2 .inner{padding:81px 0;}
+	.box2 .inner li{float:none;width:100%;}
+	}

@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:1134px){
+	html,body{width:100%;}
+	.inner{width:100%;}
+	section{width:96%;}
+	section ul:nth-child(3) li{width:31%;margin:55px 2% 0 0;}
+	}
+	
+@media screen and (max-width:980px){
+	nav{display:none;}
+	.mobnav{display:block;}
+	section ul:nth-child(3){margin:0 10%;}
+	section ul:nth-child(3) li{width:45%;margin:55px 2%;}
+	}
+
+@media screen and (max-width:768px){
+	section ul:nth-child(3){margin:0;}
+	section ul:nth-child(3) li{float:none;width:96%;}
+	}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		<meta charset="UTF-8">
+		<title>简历中心</title>
+		<link rel="stylesheet" href="css/jiang.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<script src="js/angular.min.js"></script>
+		<script>
+			angular.module("myApp",[]).controller("resumeCtrl",function($scope){
+				
+			})
+		</script>
+		</head>
+		<body>
+<div class="header">
+          <div class=header_top>
+    <div class="inner clearfixd">
+              <ul>
+        <li><a href="index.html" target="_blank"><img src="images/header-top_03.jpg">首页</a></li>
+        <li><a href="#"><img src="images/header-top_06.jpg">收藏本站</a></li>
+        <li><a href="denglu.html" target="_blank"><img src="images/header_03.jpg">登录</a></li>
+        <li><a href="#"><img src="images/header_05.jpg">注册</a></li>
+        <li><a href="#"><img src="images/header-top_09.jpg">企业邮箱</a></li>
+      </ul>
+              <a href="#">English</a> </div>
+  </div>
+          <div class="header_center">
+    <div class="inner"> <img src="images/logo.png">
+              <p>中阔地基</p>
+              <form>
+        <input type="text" value="请输入关键字">
+        <input type="button" value="">
+      </form>
+            </div>
+  </div>
+          <div class="header_nav">
+    <ul class="inner">
+              <li><a href="index.html" >首  页</a></li>
+              <li> <a href="aboutus.html">关于我们</a>
+        <ul class="nav_menu">
+                  <li><a href="#">公司简介</a></li>
+                  <li><a href="#">企业文化</a></li>
+                  <li><a href="#">合作伙伴</a></li>
+                </ul>
+      </li>
+              <li><a href="skillcenter.html" >技术中心</a>
+        <ul class="nav_menu">
+                  <li><a href="#">资料中心</a></li>
+                  <li><a href="#">DX桩特点</a></li>
+                </ul>
+      </li>
+              <li><a href="products.html" >设备及产品</a>
+        <ul class="nav_menu">
+                  <li><a href="#">旋挖挤扩钻机</a></li>
+                  <li><a href="#">地基施工检测</a></li>
+                  <li><a href="#">三岔双向挤扩</a></li>
+                </ul>
+      </li>
+              <li><a href="success.html" >成功案例</a>
+        <ul class="nav_menu">
+                  <li><a href="#">项目概述</a></li>
+                  <li><a href="#">项目展示</a></li>
+                </ul>
+      </li>
+              <li><a href="resume.html" >招贤纳士</a>
+        <ul class="nav_menu">
+                  <li><a href="#">招聘职位</a></li>
+                  <li><a href="#">简历中心</a></li>
+                </ul>
+      </li>
+              <li><a href="new.html" >新闻中心</a>
+        <ul class="nav_menu">
+                  <li><a href="#">公司新闻</a></li>
+                  <li><a href="#">行业动态</a></li>
+                </ul>
+      </li>
+              <li><a href="contactus.html" >联系我们</a>
+        <ul class="nav_menu">
+                  <li><a href="#">联系我们</a></li>
+                  <li><a href="#">诚邀加盟</a></li>
+                  <li><a href="#">常见问题</a></li>
+                  <li><a href="#">在线留言</a></li>
+                  <li><a href="#">法律声明</a></li>
+                </ul>
+      </li>
+            </ul>
+  </div>
+        </div>
+<div class="banner"></div>
+<div class="main">
+          <div class="inner clearfixd">
+    <div class="fl menu">
+              <h2>招贤纳士</h2>
+              <ul>
+        <li><a href="#">招聘职位</a></li>
+        <li><a href="#">简历中心</a></li>
+        <li class="lastli">　</li>
+      </ul>
+            </div>
+    <div class="fr">
+              <div class="location">
+        <h1>简历中心</h1>
+        <span>您的当前位置： <a href="index.html" target="_blank">首页</a>> <a href="#">招贤纳士</a>> <a href="#">简历中心</a>>
+                正文 </span> </div>
+              <div class="main-bot clearfixd padBor marb" ng-app="myApp" ng-controller="resumeCtrl">
+        <form name="resumeForm" novalidate>
+                  <table>
+            <tbody>
+                      <tr>
+                <td><span>姓名:</span>
+                          <input required name="name" ng-model="name" type="text">
+                          <i>*</i></td>
+                <td><span>性别:</span>
+                          <input  required ng-model="sex" type="radio" name="sex" style="width:15px;height:15px;" value="男">
+                          <b>男</b>
+                          <input type="radio" ng-model="sex" required name="sex" style="width:15px;height:15px;" value="女">
+                          <b>女</b></td>
+                <td><span>民族:</span>
+                          <input required name=" nation" ng-model=" nation" type="text">
+                          <i>*</i></td>
+              </tr>
+                      <tr>
+                <td><span>生份证号:</span>
+                          <input name="id" ng-model="id" minlength="18"  required type="tel" placeholder="18位"/>
+                          <i>*</i></td>
+                <td><span>婚姻状况:</span>
+                          <input name="marriage" ng-model="marriage" required type="text"/>
+                          <i>*</i></td>
+                <td><span>出生日期:</span>
+                          <input name="date" ng-model="date" required type="text" placeholder="如:1980/09/05"/>
+                          <i>*</i></td>
+              </tr>
+                      <tr>
+                <td><span>户籍:</span>
+                          <input name="census" ng-model="census" required type="text"/>
+                          <i>*</i></td>
+                <td><span>学历:</span>
+                          <input name="xuli" ng-model="xuli" required type="text"/>
+                          <i>*</i></td>
+                <td><span>应聘职位:</span>
+                          <input type="text" ng-model="job" name="job" required/>
+                          <i>*</i></td>
+              </tr>
+                      <tr>
+                <td colspan="2"><span>住址:</span>
+                          <input name="address" ng-model="address" required style="width:342px;" type="text">
+                          <i>*</i></td>
+                <td><span>邮政编码:</span>
+                          <input name="postcode" ng-model="postcode" minlength="6" required  type="tel" placeholder="6位"/>
+                          <i>*</i></td>
+              </tr>
+                      <tr>
+                <td><span>联系电话:</span>
+                          <input name="tel" required ng-model="tel" minlength="11"  type="tel" placeholder="11位"/>
+                          <i>*</i></td>
+                <td colspan="2"><span>联系电话2:</span>
+                          <input name="tel1" ng-model="tel1"  type="tel">
+                          <i>至少输入一个联系电话</i></td>
+              </tr>
+                      <tr>
+                <td colspan="2"><span>电子邮件:</span>
+                          <input name="email" ng-model="email" required type="email">
+                          <i>(如xxx@sohu.com)*</i></td>
+                <td><span>求职意向:</span>
+                          <input name="intention" ng-model="intention" required type="text">
+                          <i>*</i></td>
+              </tr>
+                      <tr>
+                <td><span>所获证书:</span>
+                          <input name="zhenshu"  type="text"></td>
+                <td><span>现工作地区:</span>
+                          <input name="workAdd"  type="text"></td>
+                <td><span>现任职位:</span>
+                          <input name="nowJob"  type="text"></td>
+              </tr>
+                      <tr>
+                <td colspan="3" valign="top"><span>工作经验:</span>
+                          <textarea name="experience" ng-model="experience"></textarea></td>
+              </tr>
+                      <tr>
+                <td colspan="3"><span>教育经历:</span>
+                          <textarea name="education" ng-model="education" required></textarea >
+                          <i>*</i></td>
+              </tr>
+                      <tr>
+                <td colspan="3"><span>兴趣爱好:</span>
+                          <textarea name="interest"  ng-model="interest"></textarea></td>
+              </tr>
+                      <tr>
+                <td colspan="3"><span>个人总结:</span>
+                          <textarea name="summarize" ng-model="summarize" required></textarea>
+                          <i>*</i></td>
+              </tr>
+                    </tbody>
+          </table>
+                  <div class="ft"> <span>注：带<i>*</i>为必填</span>
+            <button  style="width:100px;background:yellow;" ng-disabled="resumeForm.$invalid" >提交</button>
+          </div>
+                </form>
+      </div>
+            </div>
+  </div>
+        </div>
+<div class="footer">
+          <div class="inner">
+    <ul class="clearfixd">
+              <li><a href="contactus.html" target="_blank">联系我们</a></li>
+              <li><a href="">常见问题</a></li>
+              <li><a href="resume.html" target="_blank">招贤纳士</a></li>
+              <li><a href="">服务流程</a></li>
+              <li><a href="">站点地图</a></li>
+              <li><a href="statement.html" target="_blank">法律声明</a></li>
+            </ul>
+    <div class="footer_bot">
+              <p>地址：北京市海淀区兰靛厂东路2号院金源时代商务中心2号楼A座7E  邮编：100097</p>
+              <p>电话：010-88865138 88871397  传真：010-88865159  Email：dx@zkdx.com</p>
+              <p>版权所有 北京中阔地基基础技术有限公司 京ICP备05058169号</p>
+              <p>技术支持：易品互动</p>
+            </div>
+  </div>
+        </div>
+</body>
+</html>

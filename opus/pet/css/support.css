@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+nav ul li:nth-child(4) a{color:#F00;}
+
+.maintop{width:1134px;margin:0 auto;text-align:center;padding:60px 0px 90px;}
+.maintop article{float:left;width:29%;text-align:left;}
+.maintop div{float:right;width:64%;transition:all 1s;}
+.maintop div img{width:100%;}
+.maintop div:hover{opacity:0.5;}
+
+.maintop h2{line-height:158px;height:158px;font-size:34px;font-weight:normal;}
+.maintop p{line-height:27px;color:#9999a5;font-size:14px;padding-bottom:19px;}
+.maintop a{background:#0dbae4;width:116px;height:41px;line-height:41px;display:block;text-align:center;border-radius:5px;color:#fff;font-weight:bold;transition:all 0.5s;font-size:14px}
+.maintop a:hover{transform:scale(1.2);color:red;}
+
+.mainbot{background:#3598db;padding:80px 0 44px;}
+.mainbot .inner li:nth-child(3){margin-right:0;}
+.mainbot li{float:left;width:30%;margin-right:3.5%;}
+.mainbot li img:hover{opacity:0.5;}
+.mainbot li img{width:100%;transition:all 1s;}
+.mainbot li h2{line-height:70px;color:#fff;font-size:28px;}
+.mainbot li p{color:#fff;line-height:24px;padding-bottom:29px;}
+.mainbot li a{background:#0dbae4;width:116px;height:41px;line-height:41px;display:block;text-align:center;border-radius:5px;color:#fff;font-weight:bold;transition:all 0.5s;font-size:14px}
+.mainbot li a:hover{transform:scale(1.2);color:red;}

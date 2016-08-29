@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width">
+    <title>孟京辉话剧宣传H5</title>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/index.js"></script>
+    <link href="css/animations.css" rel="stylesheet" type="text/css"/>
+
+    <style>
+        *{margin:0;padding:0;}
+        img{border:none;}
+        html,body{width:100%;height:100%;}
+        .hide{display: none;}
+        .page{position:absolute;left:0;top:0;width:100%; height: 100%}
+        .page img{position:absolute;left:0;bottom:0;display: block;}
+
+        .page-1-1{background: url("images/bg1.png") no-repeat;background-size:cover;  }
+        .page-1-1 .img1{width:50.5%;left:10.6%;bottom:17.3%;}
+        .page-1-1 .img2{width:25%;left:10.6%;bottom: 9.4%;}
+        .page-1-1 .img3{width:5.9%;left:50%;bottom:5%;}
+        .page-1-1 .img4{width:100%;left:0;bottom:0;}
+        .page-2-1{width:100%;height:100%;background: url("images/bg2.jpg") no-repeat;background-size:cover;}
+        .page-2-1 .img1{width:50.5%;left:10.6%;bottom:24.3%;}
+        .page-2-1 .img2{width:54.3%;left:10.6%;bottom: 9.7%;}
+        .page-2-1 .img3{width:5.9%;left:50%;bottom:5%;}
+        .page-2-2{width:100%;height:100%;background: url("images/mjh1.jpg") no-repeat;background-size:cover;}
+        .page-2-3{width:100%;height:100%;background: url("images/mjh2.jpg") no-repeat;background-size:cover;}
+        .page-2-4{width:100%;height:100%;background: url("images/mjh3.jpg") no-repeat;background-size:cover;}
+        .page-2-4 .img3{width:5.9%;left:50%;bottom:5%;}
+        .page-2-1 .img4,.page-2-2 img,.page-2-3 img,.page-2-4 .img4{left:85%;top:45%;}
+        .page-3-1{width:100%;height:100%;background: url("images/bg3.jpg") no-repeat;background-size:cover;}
+        .page-3-1 .img1{width:50.5%;left:10.6%;bottom:24.3%;}
+        .page-3-1 .img2{width:69.9%;left:10.6%;bottom: 9.7%;}
+        .page-3-1 .img3{width:5.9%;left:50%;bottom:5%;}
+    </style>
+</head>
+<body>
+	<div class="page page-1-1 page-current">
+	    <div class="wrap">
+	    	<img src="images/page1bg.png" class="img4 pt-page-moveFromBottom pt-page-delay300">
+	        <img src="images/font1.png" class="img1 pt-page-scaleUp pt-page-delay700"/>
+	        <img src="images/font2.png" class="img2 pt-page-moveFromLeft pt-page-delay700"/>
+	        <img src="images/up2.png" class="img3 pt-page-moveIconUp"/>
+	        
+	    </div>
+	</div>
+	<div class="page page-2-1 hide">
+	    <div class="wrap">
+	        <img src="images/font1.png" class="img1 pt-page-moveFromTop pt-page-delay300"/>
+	        <img src="images/font3.png" class="img2 pt-page-moveFromLeft pt-page-delay200"/>
+	        <img src="images/up2.png" class="img3 pt-page-moveIconUp"/>
+	        <img src="images/right.png" class="img4 pt-page-moveIconUp"/>
+	    </div>
+	</div>
+	<div class="page page-2-2 hide">
+	    <div class="wrap">
+	        <img src="images/right.png" class="img3 pt-page-moveIconUp"/>
+	    </div>
+	</div>
+	<div class="page page-2-3 hide">
+	    <div class="wrap">
+	        <img src="images/right.png" class="img3 pt-page-moveIconUp"/>
+	    </div>
+	</div>
+	<div class="page page-2-4 hide">
+	    <div class="wrap">
+	    	<img src="images/up2.png" class="img3 pt-page-moveIconUp"/>
+	        <img src="images/right.png" class="img4 pt-page-moveIconUp"/>
+	    </div>
+	</div>
+	<div class="page page-3-1 hide">
+	    <div class="wrap">
+	        <img src="images/font1.png" class="img1 pt-page-flipInLeft pt-page-delay300"/>
+	        <img src="images/font4.png" class="img2 pt-page-flipInLeft  pt-page-delay300"/>
+	        <img src="images/up2.png" class="img3 pt-page-moveIconUp"/>
+	    </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:1287px){
+	body,html{width:100%;}
+	.inner{width:100%;}
+	.wrap{width:96%;}
+	}
+	
+@media screen and (max-width:980px){
+	header .header-top nav{display:none;}
+	.mobnav{display:block;}
+	}
+
+@media screen and (max-width:768px){
+	.wrap article{float:none;width:100%;}
+	.wrap aside{float:none;width:100%;}
+	footer .box{float:none;width:100%;text-align:center;}
+	footer .box ul{display:inline-block;}
+	}
+	
+@media screen and (max-width:640px){
+	.wrap aside .dl3{display:none;}
+	}	

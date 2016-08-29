@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>商品</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/detial.css" rel="stylesheet" type="text/css">
+<script src="js/tools.js"></script>
+<script src="js/widgets.js"></script>
+<script>
+window.onload=function(){
+	tools.zoom('pic','big')
+	function change(){
+		var oDiv=document.getElementById('pic');
+		var oMir=oDiv.getElementsByTagName('div')[0];
+		var oBig=document.getElementById('big');	
+		var oPic=oBig.getElementsByTagName('img')[0];
+		var aLi=document.getElementById('banner').getElementsByTagName('ul')[0].getElementsByTagName('li');
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].index=i+1;
+			aLi[i].onmouseover=function(){
+				for(var j=0;j<aLi.length;j++){
+					aLi[j].getElementsByTagName('img')[0].style.border=""	
+				};	
+				this.getElementsByTagName('img')[0].style.border="1px red solid"
+				oDiv.getElementsByTagName('img')[0].src=oPic.src='images/bbbs'+this.index+'.jpg';
+			};	
+			
+		};
+	};
+	 change();
+	 
+	function size_choice(){
+		var oUl=document.getElementById('size_list');
+		var aLi=oUl.getElementsByTagName('li');
+		
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].onmouseover=function(){
+				for(var j=0;j<aLi.length;j++){
+					if(j!=0)aLi[j].className='';	
+				};
+				this.className='ac';
+			};	
+			if(i!=0){
+				aLi[i].onmouseout=function(){
+					this.className=''; 	
+				};
+			};
+		};	 
+	};
+	size_choice();
+	
+	function addcutform(){
+		var oForm=document.getElementById('addform');
+		var oIpt=oForm.getElementsByTagName('input')[0];
+		var oAdd=oForm.getElementsByTagName('span')[0];
+		var oCut=oForm.getElementsByTagName('span')[1];
+		var num=1;
+		oAdd.onclick=function(){
+			num++;
+			oIpt.value=num;	
+		};
+		oCut.onclick=function(){
+			num--;
+			if(num<=0)num=0;
+			oIpt.value=num;	
+		};
+	};
+	addcutform();
+	
+	function tab_product(){
+		var oDiv=document.getElementById('tab_pro');
+		var oUl=oDiv.getElementsByTagName('ul')[0];
+		var aLi=oUl.getElementsByTagName('li');
+		var oDiv1=oDiv.getElementsByTagName('div')[0];
+		var l=null;
+		var c=oDiv1.innerHTML;
+	
+		for(var i=0;i<aLi.length;i++){
+			l=aLi[i].offsetLeft;
+			aLi[i].index=i;
+			aLi[i].style.position='absolute';
+			aLi[i].style.left=l+'px';
+			aLi[i].onclick=function(){
+				l=this.offsetLeft;
+				for(var j=0;j<aLi.length;j++){
+					aLi[j].className=aLi[j].style.color='';			
+				};
+				this.className='ac';
+				this.style.left=l+'px';	
+				this.style.color="red";
+				if(this.index==0){
+					oDiv1.innerHTML='<a href="javascript:;"><img src="images/574da0d4N14105ccd.jpg"/></a><a href="javascript:;"><img src="images/574da0edNc780e160.jpg"/></a><a href="javascript:;"><img src="images/574da10aN95f38148.jpg"/></a>';
+				}else if(this.index==1){
+					oDiv1.innerHTML=c;
+				};
+			};	
+		};
+	};
+	tab_product();
+}
+
+</script>
+</head>
+
+<body>
+	<div class="top">
+		<div class="inner">
+       		<div class="address">送至：北京 <span class="listmore"><i>◇</i></span></div>
+            <ul>
+                <li><a href="#">13552845677</a> <a href="#">退出</a></li>
+                <li class="I">|</li>
+                <li><a href="#">我的订单</a></li>
+                <li class="I">|</li>
+                <li><a href="#">我的京东</a><span class="listmore"><i>◇</i></span></li>
+                <li class="I">|</li>
+                <li><a href="#">京东会员</a></li>
+                <li class="I">|</li>
+                <li><a href="#">企业采购</a></li>
+                <li class="I">|</li>
+                <li><a href="#">手机京东</a><span class="listmore"><i>◇</i></span></li>
+                <li class="I">|</li>
+                <li><a href="#">关注京东</a><span class="listmore"><i>◇</i></span></li>
+                <li class="I">|</li>
+                <li><a href="#">客户服务</a><span class="listmore"><i>◇</i></span></li>
+                <li class="I">|</li>
+                <li><a href="#">网站导航</a><span class="listmore"><i>◇</i></span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+    	<div class="inner">
+        	<div class="headertop">
+            	<div class="logo"><img src="images/logo-201305.png" ></div>
+                <div class="middle">
+                	<form>
+                    	<input type="text" class="searchtext" placeholder="闪购特卖" ><input type="button" class="searchbtn" value="搜索" >
+                    </form>
+                    <ul>
+                    	<li><a class="nav1" href="#">玩转3C</a></li>
+                        <li><a href="#">平板99秒</a></li>
+                        <li><a href="#">1分钱抢</a></li>
+                        <li><a href="#">荣耀V8</a></li>
+                        <li><a href="#">直降618元</a></li>
+                        <li><a href="#">六一儿童节</a></li>
+                        <li><a href="#">吉利</a></li>
+                        <li><a href="#">免费试用</a></li>
+                        <li><a href="#">围城</a></li>
+                    </ul>
+                </div>
+                <div class="shopping"><a href="#">我的购物车 ></a><span>0</span></div>
+                <div class="clear"></div>
+            </div>
+            <div class="headerbtm">
+            	<div class="title">全部商品分类</div>
+                <ul>
+                	<li><a href="#">服装城</a></li>
+                    <li><a href="#">美妆馆</a></li>
+                    <li><a href="#">超市</a></li>
+                    <li><a href="#">生鲜</a></li>
+                    <li><a href="#">全球购</a></li>
+                    <li><a href="#">闪购</a></li>
+                    <li><a href="#">团购</a></li>
+                    <li><a href="#">拍卖</a></li>
+                    <li><a href="#">金融</a></li>
+                </ul>
+                <div class="pic"><img src="images/573c1e90N6d9e5fbc.jpg" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+    	<div class="inner">
+        	<div class="maintop"><a class="h_1 "href="javascript:;">母婴</a><span>></span><a class="h_2" href="javascript:;">尿裤湿巾</a><span>></span><a class="h_2" href="javascript:;">婴儿尿裤</a><span>></span><a class="h_2" href="javascript:;">帮宝适（pampers）</a><span>></span><a class="h_2" href="javascript:;">帮宝适纸尿裤</a></div>
+       		<div class="mainbot">
+            	<div class="mainl">
+                    <div id="pic" class="pic">
+                        <img src="images/bbbs1.jpg" />
+                        <div id="mir" class="mir">
+                    </div>
+                    </div>
+                        <div id="big" class="big">
+                        	<img src="images/bbbs1.jpg" />
+                   		</div>
+                    <div id="banner" class="banner banner_1">
+                        <span class="leftBtn"><</span>
+                        <span class="rightBtn">></span>
+                        <ol></ol>
+                        <ul>
+                            <li><a href="javescript:;"><img src="images/bbs1.jpg"/></a></li>
+                            <li><a href="javescript:;"><img src="images/bbs2.jpg"/></a></li>
+                            <li><a href="javescript:;"><img src="images/bbs3.jpg"/></a></li>
+                            <li><a href="javescript:;"><img src="images/bbs4.jpg"/></a></li>
+                            <li><a href="javescript:;"><img src="images/bbs5.jpg"/></a></li>
+                        </ul>
+                    </div>
+                    <span class="gift">商品编号：695469</span><span><img src="images/icon_03.jpg" /><a href="javascript:;">分享</a></span><span><img src="images/icon_05.jpg" /><a href="javascript:;">关注商品</a></span>
+                </div>
+                <div class="mainr">
+                	<h2>【京东超市】帮宝适 Pampers 超薄干爽 婴儿纸尿裤 加大号XL128片【12-17kg】</h2>
+                    <p class="red" style="font-size:14px;padding:5px 0;">神奇锁水珠珠，干爽锁住尿湿，让宝宝安睡一整晚！</p>
+                	<div class="price">
+                    	<p class="pricetag">京东价：<span>¥199.00</span><a href="javascript;:">（降价通知）</a></p>
+						<p class="comment">累计评价<a href="javascript;:">1673709</a></p>
+                    </div>
+                    <ul class="othertag">
+                    	<li><p>a啊飒飒的按</p></li>
+                        <li><p>由 京东 发货,<span style="color:red">Pampers京东自营旗舰店</span>提供售后服务。15:00前完成下单，可预约今晚送达</p></li>
+                    </ul>
+                    <div class="sizelist">
+                    	<P>选择尺码:</P>
+                        <ul id="size_list">
+                        	<li class="ac"><a href="javascript:;">绿帮加大号XL128片</a><img src="images/triangle_03.jpg"></li>
+                            <li><a href="javascript:;">绿帮大号X164片</a></li>
+                            <li><a href="javascript:;">绿帮中号L192片</a></li>
+                            <li><a href="javascript:;">绿帮小号S164片</a></li>
+                            <li><a href="javascript:;">绿帮新生儿NB96片</a></li>
+                            <li><a href="javascript:;">干爽啦啦裤加加大码XXL50片</a></li>
+                            <li><a href="javascript:;">干爽啦啦裤加大码XL72片</a></li>
+                            <li><a href="javascript:;">干爽啦啦裤大码L84片</a></li>
+                            <li><a href="javascript:;">干爽啦啦裤中码M94片</a></li>
+                        </ul>
+                    </div>
+                    <form id="addform" class="add">
+                    	<input type="text" value="1">
+                        <div class="addbtn">
+                        	<span>+</span>
+                        	<span>-</span>
+                        </div>
+                        <a href="javascript:;"><img src="images/shoppingcar_07.jpg"></a>
+                    </form>
+                    <p class="prom">温馨提示：　1.　本商品不能使用　2.　东券支持7天无理由退货</p>
+                </div>
+            	<div class="mainrr">
+                	<img class="bbs" src="images/bbss_03.jpg" />
+                    <p style="height:70px;line-height:70px;"><a href="javascript:;" style="color:#005fa3;">Pampers京东自营旗...</a>　<span style="background:red;color:#fff;padding:5px;border-radius:5px;">京东自营</span></p>
+                    
+                    <ul>
+                    	<li><a href="javascript:;"><img src="images/ccc_03.jpg"></a></li>
+                        <li><a href="javascript:;"><img src="images/ccc_05.jpg"></a></li>
+                        <li><a href="javascript:;"><img src="images/ccc_09.jpg"></a></li>
+                        <li><a href="javascript:;"><img src="images/ccc_10.jpg"></a></li>
+                    </ul>
+                     <p>服务支持：</p>
+                    <div class="night" style="margin-top:10px;">
+                    	<a href="javascript:;"><img src="images/night_14.jpg"></a>
+                        <a href="javascript:;"><img src="images/night_17.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div id="tab_pro" class="main_2 inner">
+    	<ul class="tab">
+        	<li style="border-left:none;">推荐配件</li>
+            <li class="ac">人气单品</li>
+        </ul>
+        <div class="content">
+        	<a href="javascript:;"><img src="images/tab_22.jpg"/></a>
+            <a href="javascript:;"><img src="images/tab_23.jpg"/></a>
+            <a href="javascript:;"><img src="images/tab_24.jpg"/></a>
+            <a href="javascript:;"><img src="images/tab_25.jpg"/></a>
+            <a href="javascript:;"><img src="images/tab_26.jpg"/></a>
+            <a href="javascript:;"><img src="images/tab_27.jpg"/></a>
+        </div>
+    </div>
+    <div class="footerbanner">
+    	<div class="inner">
+        	<ul>
+            	<li><a href="#"><img src="images/footbanner_03.jpg" /></a></li>
+                <li><a href="#"><img src="images/footbanner_04.jpg" /></a></li>
+                <li><a href="#"><img src="images/footbanner_05.jpg" /></a></li>
+                <li><a href="#"><img src="images/footbanner_06.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer inner">
+    	<div class="footer-top">
+        	<div>
+            	<h2>购物指南</h2>
+                <ul>
+                	<li><a href="#">购物流程</a></li>
+                    <li><a href="#">会员介绍</a></li>
+                    <li><a href="#">生活旅行/团购</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">大家电</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+            <div>
+            	<h2>配送方式</h2>
+                <ul>
+                	<li><a href="#">上门自提</a></li>
+                    <li><a href="#">211限时达</a></li>
+                    <li><a href="#">配送服务查询</a></li>
+                    <li><a href="#">配送费收取标准</a></li>
+                    <li><a href="#">海外配送</a></li>
+                </ul>
+            </div>
+            <div>
+            	<h2>支付方式</h2>
+                <ul>
+                	<li><a href="#">货到付款</a></li>
+                    <li><a href="#">在线支付</a></li>
+                    <li><a href="#">分期付款</a></li>
+                    <li><a href="#">邮局汇款</a></li>
+                    <li><a href="#">公司转账</a></li>
+                </ul>
+            </div>
+            <div>
+            	<h2>售后服务</h2>
+                <ul>
+                	<li><a href="#">售后政策</a></li>
+                    <li><a href="#">价格保护</a></li>
+                    <li><a href="#">退款说明</a></li>
+                    <li><a href="#">返修/退换货</a></li>
+                    <li><a href="#">取消订单</a></li>
+                </ul>
+            </div>
+            <div class="last2">
+            	<h2>特色服务</h2>
+                <ul>
+                	<li><a href="#">夺宝岛</a></li>
+                    <li><a href="#">DIY装机</a></li>
+                    <li><a href="#">延保服务</a></li>
+                    <li><a href="#">京东E卡</a></li>
+                    <li><a href="#">京东通信</a></li>
+                    <li><a href="#">京东JD+</a></li>
+                </ul>
+            </div>
+            <div class="last1">
+            	<h2>京东自营覆盖区县</h2>
+                <p>京东已向全国2630个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+                <span><a href="#">查看详情 ></a></span>
+            </div>
+        </div>
+        
+        <div class="footer-bot">
+        	<ul class="ul1">
+            	<li><a href="#">关于我们</a><span>|</span></li>
+                <li><a href="#">联系我们</a><span>|</span></li>
+                <li><a href="#">商家入驻</a><span>|</span></li>
+                <li><a href="#">营销中心</a><span>|</span></li>
+                <li><a href="#">手机京东</a><span>|</span></li>
+                <li><a href="#">友情链接</a><span>|</span></li>
+                <li><a href="#">销售联盟</a><span>|</span></li>
+                <li><a href="#">京东社区</a><span>|</span></li>
+                <li><a href="#">京东公益</a><span>|</span></li>
+                <li><a href="#">English Site</a><span>|</span></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div>
+                <p>京公网安备 11000002000088号  |  京ICP证070359号  |  互联网药品信息服务资格证编号(京)-经营性-2014-0008  |  新出发京零 字第大120007号</p>
+                <p>互联网出版许可证编号新出网证(京)字150号  |  出版物经营许可证  |  网络文化经营许可证京网文[2014]2148-348号  |  违法和不良信息举报电话：4006561155</p>
+                <p>Copyright &copy; 2004 - 2016  京东JD.com 版权所有  |  消费者维权热线：4006067733</p>
+                <p>京东旗下网站：京东钱包</p>
+            </div>
+            <ul class="ul2">
+            	<li><a href="#"><img src="images/54b8871eNa9a7067e.png" /></a></li>
+                <li><a href="#"><img src="images/54b8872dNe37a9860.png" /></a></li>
+                <li><a href="#"><img src="images/wljc_03.jpg" /></a></li>
+                <li><a href="#"><img src="images/54b8875fNad1e0c4c.png" /></a></li>
+                <li><a href="#"><img src="images/5698dc03N23f2e3b8.jpg" /></a></li>
+                <li><a href="#"><img src="images/5698dc16Nb2ab99df.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+nav ul li:nth-child(2) a{color:#F00;}
+
+.main-1{width:1134px;margin:0 auto;text-align:center;padding:60px 0px 90px;}
+.main-1 h2{line-height:158px;height:158px;font-size:34px;font-weight:normal;}
+.main-1 div:nth-child(2){background:url(../images/pic8.jpg) no-repeat left top;padding-left:289px;text-align:left;}
+.main-1 p{line-height:27px;color:#9999a5;font-size:14px;padding-bottom:19px;}
+.main-1 a{background:#0dbae4;width:116px;height:41px;line-height:41px;display:block;text-align:center;border-radius:5px;color:#fff;font-weight:bold;transition:all 0.5s;}
+
+.main-1 h3{line-height:151px;height:151px;font-size:28px;font-weight:normal;}
+.main-1 div:nth-child(4){background:url(../images/pic9.jpg) no-repeat right top;text-align:left;padding-right:413px;}
+.main-1 div:nth-child(4) span{color:#000;}
+
+.main-1 a:hover{transform:scale(1.2);color:red;}
+
+.main-2{background:#3598db;}
+.main-2 ul{width:1134px;margin:0 auto;padding:59px 0px 39px;}
+.main-2 li{width:238px;height:64px;color:#fff;float:left;margin-bottom:42px;padding-left:12%;}
+.main-2 ul li:nth-child(1){background:url(../images/dg-6.png) no-repeat left center;}
+.main-2 ul li:nth-child(2){background:url(../images/dg-5.png) no-repeat left center;}
+.main-2 ul li:nth-child(3){background:url(../images/dg-4.png) no-repeat left center;}
+.main-2 ul li:nth-child(4){background:url(../images/dg-3.png) no-repeat left center;}
+.main-2 ul li:nth-child(5){background:url(../images/dg-2.png) no-repeat left center;}
+.main-2 ul li:nth-child(6){background:url(../images/dg-1.png) no-repeat left center;}

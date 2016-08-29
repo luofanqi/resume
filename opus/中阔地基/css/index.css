@@ -1,0 +1,40 @@
+/*首页*/
+.banner{background:url(../images/banner.png) no-repeat #4b4b4b center center;height:451px;margin-top:-20px;position:relative;z-index: 10;}
+.main .main_top{margin-top:-69px;position:relative;z-index: 30;}
+.main_top ul li{padding:16px 0px 16px 27px;float:left; position:relative;color:#fff;}
+.main_top ul li h2{font-size:13px;line-height:20px;height:20px;}
+.main_top ul li p{line-height:17px;height:17px;}
+.main_top ul li img{position:absolute;top:23px;right:21px;}
+.main_top_first_li{width:330px;background:#262835;}
+.main_top_second_li{width:293px;background:#262835;}
+.main_top_third_li{width:256px;background:#262835;}
+.main_top ul li:hover{background:#555762; cursor:pointer;}
+.main_center{background:url(../images/mainbg.jpg) repeat-x left bottom;}
+.main_center_top{padding:25px 20px 0px 20px;}
+.main_center_top_title{border-bottom:1px solid #ccc;}
+.main_center_top_title .pic_first{width:220px;height:150px;border:1px solid #ccc;float:left;padding:3px;margin-bottom:27px;}
+.main_center_top_title .font_first{float:left;width:660px;margin-left:32px;}
+.main_center_top_title .font_first h2{font-size:14px;color:#333333;}
+.main_center_top_title .font_first h6{line-height:20px;height:20px;padding-top:14px;color:#585858}
+.main_center_top_title .font_first p{line-height: 20px;height:20px;color:#585858;}
+.main_center_top_count {padding-top:35px;padding-bottom:28px;}
+.main_center_top_count a{color:#585858;}
+.main_center_top_count .li_first{float:left;width:280px;margin-right:40px;}
+.top_box{width:280px;}
+.li_first img{padding:3px;border:1px solid #ccc;float:left;}
+.li_first .li_box{float:left;margin-left:10px;border-top:3px solid #ff7900;width:192px;}
+.li_first h2{font-family: Adobe 黑体 Std;font-size:14px;}
+.li_first h6{margin-top:11px;line-height:24px;}
+.li_first .li_ul{margin-top:11px;}
+.li_first .li_ul li a{line-height:24px;height:24px;}
+.li_first .li_ul li a span{margin:0px 8px 0px 3px }
+.bg_center{height:20px;background:url(../images/bg11.jpg) repeat-x left bottom;}
+.main_footer{padding:0px 20px;border-top:1px solid #ff7900;height:217px;}
+.main_footer_top{height:39px;line-height: 39px;}
+.main_footer_top h2{font-size:13px;float:left;}
+.main_footer_top p{float:right;}
+.main_footer_top p a{color:#585858;}
+.main_footer ul li{float:left;text-align: center;margin-right:20px;}
+.main_footer ul li a{color:#585858;}
+.main_footer ul li a img{padding:3px;border:1px solid #ccc;}
+.main_footer ul li a span{display:block;}

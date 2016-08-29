@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+header .inner nav ul li:nth-child(3) a{color:#F00;}
+
+section{width:1134px;margin:0 auto;text-align:center;padding:47px 0 108px;}
+section h2{height:175px;line-height:175px;font-size:34px;}
+section ul li{float:left;}
+section ul:nth-child(2){display:inline-block;padding-bottom:14px;}
+section ul:nth-child(2) li a{font-size:14px;line-height:14px;padding:0 16px;display:inline-block;}
+section ul:nth-child(2) li .all{color:red;}
+section ul:nth-child(2) li span{color:#a4a4a4;}
+section ul:nth-child(2) li a:hover{color:red;transform:translateY(-5px);}
+
+section ul:nth-child(3) li{width:353px;border-bottom:1px solid #ddd;margin:55px 23px 0 0;}
+section ul:nth-child(3) li img{width:100%;display:inline-block;transition:all 0.5s;}
+section ul:nth-child(3) li p{line-height:30px;font-size:12px;}
+section ul:nth-child(3) li a{line-height:30px;font-size:12px;padding-top:12px;font-weight:bold;}
+section ul:nth-child(3) li a:hover{color:red;}
+section ul:nth-child(3) li{position:relative;}
+section ul:nth-child(3) li .gaizi{width:100%px;height:100%px;overflow:hidden;display:block;}
+section ul:nth-child(3) li img:hover{transform:scale(1.5);}
+

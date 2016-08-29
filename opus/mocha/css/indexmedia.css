@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:1450px){
+	.lefticon a{left:0;}
+	.lefticon2 a{left:0;}
+	.righticon a{right:0;}
+	.righticon2 a{right:0;}
+	}
+@media screen and (max-width:1287px){
+	body,html{width:100%;}
+	.inner{width:100%;}
+	}
+	
+@media screen and (max-width:980px){
+	header .header-top nav{display:none;}
+	.mobnav{display:block;}
+	}
+	
+@media screen and (max-width:768px){
+	.section2 .section2-bot{margin-right:0;margin-top:20px;}
+	.section2 .section2-bot li{width:90%;float:none;margin:0 auto;}
+	footer .box{float:none;width:100%;text-align:center;}
+	footer .box ul{display:inline-block;}
+	}
+	
+@media screen and (max-width:640px){
+	.section1 .section1-bot li{width:90%;float:none;margin:5% 5% 5%;}
+	}

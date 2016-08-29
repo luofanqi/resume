@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:1287px){
+	body,html{width:100%;}
+	.inner{width:96%;}
+	}
+	
+@media screen and (max-width:980px){
+	header .header-top nav{display:none;}
+	.mobnav{display:block;}
+	
+	}
+	
+@media screen and (max-width:768px){
+	.left,.right{float:none;width:97%;}
+	.right{margin-top:20px;}
+	footer .box{float:none;width:100%;text-align:center;}
+	footer .box ul{display:inline-block;}
+	}

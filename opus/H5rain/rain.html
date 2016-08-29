@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>Rain</title>
+		<link rel="stylesheet" href="css/animations.css" />
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script type="text/javascript" src="js/touch.js" ></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
+		<style>
+			*{margin: 0;padding: 0;}
+			body,html{width:100%;height:100%;}
+			.page .icon{width:10%;left:45%;top:90%;}
+			.page .icon1{width:10%;left:90%;top:45%;transform: rotate(90deg);}
+			.page{width:100%;height:100%;position:absolute;}
+			.page-1-1{background:url(images/rain.jpg) no-repeat left top;background-size: cover;}
+			.page-2-1{background:url(images/rain_bg.jpg) no-repeat left top;background-size: cover;}
+			.page-2-1 img{position:absolute;left:0;top:0;}
+			.page-2-1 .img1{width:24.2%;left:13%;top:10.5%;}
+			.page-2-1 .img2{width:23.6%;left:38.4%;top:14.1%;}
+			.page-2-1 .img3{width:23.4%;left:63%;top:6.9%;}
+			.page-2-1 .img4{width:29.3%;left:75.6%;top:59.9%;}
+			.page-2-1 .img5{width:26.6%;left:0;top:90%;}
+			.page-2-1 .img6{width:76%;left:9.6%;top:60.3%;}
+			.page-2-1 .img7{width:16.6%;left:37.3%;top:63.1%;transform-origin: left;animation:magicfoot 1s 0.85s;animation-fill-mode:forwards;opacity: 0;}
+			.hide{display: none;}
+			@keyframes magicfoot{
+				from{opacity: 0;}
+				to{transform: rotate(720deg);opacity: 1;}
+			}
+			.page-2-2{background:url(images/rain_bg.jpg) no-repeat left top;background-size: cover;}
+			.page-2-2 img{width:27.4%;position: absolute;left:0;top:0}
+			.page-2-2 .img1{left:72.4%;top:13.1%;}
+			.page-2-2 .img2{left:17.4%;top:28.6%;}
+			.page-2-2 .img3{left:44.9%;top:28.6%;}
+			.page-2-2 .img4{left:44.9%;top:44%;}
+			.page-2-2 .img5{left:72.5%;top:44%;}
+			.page-2-2 .img6{width:29.3%;left:75.6%;top:59.9%;}
+			.page-2-2 .img7{width:26.6%;left:0;top:90%;}
+			.page-2-2 .img8{width:76%;left:9.6%;top:60.3%;}
+			.page-2-2 .img9{width:16.6%;left:37.3%;top:63.1%;}
+			.page-3-1{background:url(images/page1.jpg) no-repeat left top;background-size: cover;}
+			.page-3-1 img{width:100%;position:absolute;left:0;top:0;}
+			.page-3-1 .img2{width:24%;left:24%;top:4.5%;}
+			.page-4-1{background:url(images/rain_bg.jpg) no-repeat left top;background-size: cover;}
+			.page-4-1 img{width:27.4%;position: absolute;left:0;top:0}
+			.page-4-1 .img1{width:72.4%;left:10.6%;top:9.3%;}
+			.page-4-1 .img2{width:28.6%;left:47.6%;top:17.6%;transform-origin: left;animation:magicfoot 1s 0.25s;animation-fill-mode:forwards;opacity: 0;}
+			.page-4-1 .img3{left:15.4%;top:32.7%;}
+			.page-4-1 .img4{left:54.6%;top:32.7%;}
+			.page-4-1 .img5{left:15.4%;top:60.6%;}
+			.page-4-1 .img6{left:54.6%;top:60.6%;}
+			.page-4-1 .img7{left:22%;top:34.5%;width:19.3%;}
+			.page-4-1 .img8{left:61%;top:34.5%;width:19.3%;}
+			.page-4-1 .img9{left:22%;top:62.2%;width:19.3%;}
+			.page-4-1 .img10{left:61%;top:62.2%;width:19.3%;}
+			.page-4-1 .img11{left:4%;top:6%;width:100%;}
+		</style>
+
+	</head>
+	<body>
+		<div class="page page-1-1">
+			<div class="wrap">
+			</div>
+		</div>
+		<div class="page page-2-1 hide">	
+			<div class="wrap">
+				<img class="img1 pt-page-moveFromTop hide" src="images/rain_06.jpg">
+				<img class="img2 pt-page-moveFromBottom hide" src="images/rain_09.jpg">
+				<img class="img3 pt-page-moveFromTop hide" src="images/rain_03.jpg">	
+				<img class="img4 pt-page-moveFromRight pt-page-delay400 hide" src="images/top.png"> 
+				<img class="img5 pt-page-moveFromLeft pt-page-delay400 hide" src="images/bottom.png"> 
+				<img class="img6 pt-page-rotatePullLeft pt-page-delay400 hide" src="images/page2.png"> 
+				<img class="img7 hide" src="images/magicfoot_03.png"> 
+				<img class="icon pt-page-moveIconUp hide" src="images/icon_up.png"> 
+				<img class="icon icon1 hide" src="images/icon_up.png"> 
+			</div>
+		</div>
+		<div class="page page-2-2 hide">
+			<div class="wrap">
+				<img class="img1 hide pt-page-scaleUp hide" src="images/r_03.jpg">
+				<img class="img2 hide pt-page-moveToRightEasing hide" src="images/r_05.jpg"> 
+				<img class="img3 hide pt-page-moveToLeftEasing hide" src="images/r_06.jpg"> 
+				<img class="img4 hide pt-page-flipInTop hide" src="images/r_09.jpg"> 
+				<img class="img5 hide pt-page-fade hide" src="images/r_10.jpg"> 
+				<img class="img6 pt-page-moveFromRight pt-page-delay400 hide" src="images/top.png"> 
+				<img class="img7 pt-page-moveFromLeft pt-page-delay400 hide" src="images/bottom.png"> 
+				<img class="img8 pt-page-rotatePullLeft pt-page-delay400 hide" src="images/page2.png"> 
+				<img class="img9 hide pt-page-rotateCarouselLeftIn hide" src="images/magicfoot_03.png"> 
+			</div>
+		</div>
+		<div class="page page-3-1 hide">
+			<div class="wrap">
+				<img class="img1 pt-page-flipInTop pt-page-delay300 hide" src="images/page1-title.png">
+				<img class="img2 pt-page-moveFromLeft pt-page-delay500 hide" src="images/shout.png">
+				<img class="icon pt-page-moveIconUp hide" src="images/icon_up.png"> 
+			</div>
+		</div>
+		<div class="page page-4-1 hide">
+			<div class="wrap">
+				<img class="img1 pt-page-moveFromBottom hide" src="images/last.png">
+				<img class="img2 pt-page-moveFromTop hide" src="images/last_rain.png">
+				<img class="img3 pt-page-moveFromTop hide pt-page-delay300" src="images/last_border.png">
+				<img class="img4 pt-page-moveFromTop hide pt-page-delay400" src="images/last_border.png">
+				<img class="img5 pt-page-moveFromTop hide pt-page-delay500" src="images/last_border.png">
+				<img class="img6 pt-page-moveFromTop hide pt-page-delay700" src="images/last_border.png">
+				<img class="img7 pt-page-moveFromLeft hide pt-page-delay1000" src="images/shanghai.png"">
+				<img class="img8 pt-page-moveFromLeft hide pt-page-delay1000" src="images/wuhan.png">
+				<img class="img9 pt-page-moveFromLeft hide pt-page-delay1000" src="images/shenyang.png">
+				<img class="img10 pt-page-moveFromLeft hide pt-page-delay1000" src="images/changsha.png">
+				<img class="img11 pt-page-flipInTop hide pt-page-delay1000" src="images/circle.png">
+			</div>
+		</div>
+	</body>
+</html>

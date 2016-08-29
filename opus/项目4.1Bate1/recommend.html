@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>直接推荐</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/angular.min.js"></script>
+    <script src="js/style.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header_left">
+        <a href="javascript:history.back(-1)"><img src="images/header_bg_03.jpg"></a>
+    </div>
+    <h2>招聘岗位</h2>
+    <div class="header_right">
+        <a href="index.html"><img src="images/header_bg_05.jpg"></a>
+    </div>
+</div>
+<div class="main tc" ng-app="myapp" ng-controller="tuijianCtrl">
+    <div class="main_top"></div>
+    <div class="main_center">
+        <div class="base_mes">
+            <form name="base_form" novalidate>
+                <h2>推荐人基本信息</h2>
+                <div class="messages" style="margin-bottom:0.725rem;">
+                    <div>
+                        <p>姓名:</p>
+                        <input type="text" required name="name" ng-model="name"/>
+                        <i class="error" ng-show="base_form.name.$error.required && base_form.name.$dirty">请输入姓名</i>
+                    </div>
+                    <div>
+                        <p>电话:</p>
+                        <input type="tel" required name="tel" ng-model="tel">
+                        <i class="error" ng-show="base_form.tel.$error.required && base_form.tel.$dirty">请输入电话号码</i>
+                    </div>
+                    <div>
+                        <p>QQ:</p>
+                        <input type="text" required name="QQ" ng-model="QQ">
+                        <i class="error" ng-show="base_form.QQ.$error.required && base_form.QQ.$dirty">请输入QQ号</i>
+                    </div>
+                    <div>
+                        <p>与被推荐人关系:</p>
+                        <input type="text" required name="relation" ng-model="relation">
+                        <i class="error" ng-show="base_form.relation.$error.required && base_form.relation.$dirty">不能为空</i>
+                    </div>
+                </div>
+                <h2>被推荐人基本信息</h2>
+                <div class="messages">
+                    <div>
+                        <p>姓名:</p>
+                        <input type="text" required name="name1" ng-model="name1">
+                        <i class="error" ng-show="base_form.name1.$error.required && base_form.name1.$dirty">请输入姓名</i>
+                    </div>
+                    <div>
+                        <p>性别:</p>
+                        <input type="text" required name="sex" ng-model="sex">
+                        <i class="error" ng-show="base_form.sex.$error.required && base_form.sex.$dirty">请输入性别</i>
+                    </div>
+                    <div>
+                        <p>电话:</p>
+                        <input type="tel" required name="tel1" ng-model="tel1">
+                        <i class="error" ng-show="base_form.tel1.$error.required && base_form.tel1.$dirty">请输入电话号</i>
+                    </div>
+                    <div>
+                        <p>QQ:</p>
+                        <input type="text" required name="QQ1" ng-model="QQ1">
+                        <i class="error" ng-show="base_form.QQ1.$error.required && base_form.QQ1.$dirty">请输入QQ号</i>
+                    </div>
+                    <div>
+                        <p>前雇主名称:</p>
+                        <input type="text" required name="oldboss" ng-model="oldboss">
+                        <i class="error" ng-show="base_form.oldboss.$error.required && base_form.oldboss.$dirty">请输入名称</i>
+                    </div>
+                    <div>
+                        <p>前工作岗位:</p>
+                        <input type="text" required name="oldjob" ng-model="oldjob">
+                        <i class="error" ng-show="base_form.oldjob.$error.required && base_form.oldjob.$dirty">请输入岗位</i>
+                    </div>
+                    <div>
+                        <p>申请岗位:</p>
+                        <input type="text" required name="work" ng-model="work">
+                        <i class="error" ng-show="base_form.work.$error.required && base_form.work.$dirty">请输入岗位</i>
+                    </div>
+                    <div>
+                        <p>期望工作地:</p>
+                        <input type="text" required name="add" ng-model="add">
+                        <i class="error" ng-show="base_form.add.$error.required && base_form.add.$dirty">请输入地址</i>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tijiao">
+            <input type="submit" ng-disabled="base_form.$invalid" value="我要提交">
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <ul>
+        <li>
+            <a href="index.html">
+                <div>
+                    <img src="images/footer_bg_06.jpg">
+                </div>
+                <span>首页/Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:history.back(-1)">
+                <div>
+                    <img src="images/footer_bg_09.jpg">
+                </div>
+                <span>返回/Return</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

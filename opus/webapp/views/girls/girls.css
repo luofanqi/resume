@@ -1,0 +1,95 @@
+.scroll-page .has-header{
+    position: relative;
+}
+
+/*箭头*/
+.arror {
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    -webkit-animation: bounce 2000ms infinite ease-out;
+    -moz-animation: bounce 2000ms infinite ease-out;
+    -o-animation: bounce 2000ms infinite ease-out;
+    animation: bounce 2000ms infinite ease-out;
+}
+
+/* 帧动画*/
+/* Webkit, Chrome and Safari */
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    15% {
+        -webkit-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    85% {
+        -webkit-transform:translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform:translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* Mozilla Firefox 15 below */
+@-moz-keyframes bounce {
+    0% {
+        -moz-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    15% {
+        -moz-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    85% {
+        -moz-transform:translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform:translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* Opera 12.0 */
+@-o-keyframes bounce {
+    0% {
+        -o-transform:translateY(-0%);
+        opacity: 0.8;
+    }
+    15% {
+        -o-transform:translateY(0%);
+        opacity: 0.8;
+    }
+    100% {
+        -o-transform:translateY(-100%);
+        opacity: 0;
+    }
+    85% {
+        -o-transform:translateY(-100%);
+        opacity: 0;
+    }
+}
+
+/* W3, Opera 12+, Firefox 16+ */
+@keyframes bounce {
+    0% {
+        transform:translateY(0%);
+        opacity: 0.8;
+    }
+    15% {
+        transform:translateY(0%);
+        opacity: 0.8;
+    }
+    85% {
+        transform:translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        -o-transform:translateY(-100%);
+        opacity: 0;
+    }
+}

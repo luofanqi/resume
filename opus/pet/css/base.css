@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,a,p,h1,h2,h3,h4,h5,h6,input,ul,li{margin:0;padding:0;}
+li{list-style:none;}
+a{text-decoration:none;color:#000;}
+img,input,textarea{border:0;outline:none;}
+.clear{clear:both;}
+
+header{background:#3598db;padding:27px 0px 43px 0px;}
+.inner{width:1134px;margin:0 auto;}
+header .inner{position:relative;}
+header .inner .logo{float:left;}
+header form{float:right;padding-top:24px;}
+header .tijiao{background:#fff url(../images/top-s.png) no-repeat center center;width:41px;height:35px;float:left;cursor:pointer;}
+header form .search{padding-left:13px;width:176px;height:35px;line-height:35px;float:left;}
+nav{background:#fff;width:85%;height:86px;position:absolute;left:79px;bottom:-90px;}
+nav ul{padding-left:12%;height:86px;box-shadow:0 10px 5px 0 rgba(0,0,0,0.3);}
+nav ul li{padding-right:86px;float:left;}
+nav ul li a{height:86px;line-height:86px;font-size:13px;letter-spacing:1px;display:block;position:relative;transition:all 0.5s;}
+nav ul li:nth-child(6){padding-right:0px;}
+nav ul a:hover{color:#27b6de;}
+nav ul a:hover:before{border-top:1px solid #27b6de;transform:translateY(-20px);}
+nav ul a:hover:after{border-top:1px solid #27b6de;transform:translateY(20px);}
+
+nav ul li a:before{content:'';width:100%;border-top:1px solid rgba(0,0,0,0);position:absolute;left:0;bottom:10px;transition:all 0.5s;}
+nav ul li a:after{content:'';width:100%;border-top:1px solid rgba(0,0,0,0);position:absolute;left:0;top:10px;transition:all 0.5s;}
+.mobnav{background:#fff;width:32px;height:32px;display:none;float:right;}
+
+footer{background:#555f76;text-align:center;}
+footer p{margin:0 auto;line-height:84px;padding-top:16px;font-size:16px;color:#fff;}
+footer p span{color:#3f9ccd;}
