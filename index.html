@@ -66,7 +66,7 @@
 		<script>
 			window.onload=function(){
 				
-				for(var i=0;i<$(".me span").length;i++){		
+				for(var i=0;i<$(".me span").length;i++){
 					if(i<10){
 						$(".me span").eq(i).css("animation-delay","0."+i+"s");
 					}else{
@@ -75,35 +75,8 @@
 				};
 				$('.iphone').eq(0).click(function(){window.open("opus/H5rain/rain.html")});
 				$('.iphone').eq(1).click(function(){window.open("opus/H5drama/index.html")});
-				var Page = (function() {
 
-					var $navArrows = $( '#nav-arrows' ).hide(),
-						$shadow = $( '#shadow' ).hide(),
-						slicebox = $( '#sb-slider' ).slicebox( {
-							onReady : function() {
-								$navArrows.show();
-								$shadow.show();
-							},
-							orientation : 'r',
-							cuboidsRandom : true,
-							disperseFactor : 30
-						} ),				
-						init = function() {
-							initEvents();						
-						},
-						initEvents = function() {		
-							$navArrows.children( ':first' ).on( 'click', function() {
-								slicebox.next();
-								return false;
-							} );
-							$navArrows.children( ':last' ).on( 'click', function() {							
-								slicebox.previous();
-								return false;
-							} );
-						};
-						return { init : init };
-				})();
-				Page.init();
+
 				
 			}
 		</script>
@@ -117,7 +90,7 @@
 		</div>
 	</div>
 
-	<div class="page page2">
+	<div class="page page2 ">
 		<div class="contain">
 			<div class="main inner">
 				<h2>作品展示</h2>
@@ -212,8 +185,47 @@ runPage = new FullPage({
 		opacity: [0, 1]
 	},
 	mode: 'wheel, touch, nav:navBar',
-	easing: 'ease'
+	easing: 'ease',
+	callback: function(index){
+		if(index==2){
+
+			autoPlay();
+		}
+	}
 });
+function autoPlay(){
+
+	var Page = (function() {
+
+		var $navArrows = $( '#nav-arrows' ).hide(),
+				$shadow = $( '#shadow' ).hide(),
+				slicebox = $( '#sb-slider' ).slicebox( {
+					onReady : function() {
+						$navArrows.show();
+						$shadow.show();
+					},
+					orientation : 'r',
+					cuboidsRandom : true,
+					disperseFactor : 30
+				} ),
+				init = function() {
+					initEvents();
+				},
+				initEvents = function() {
+					$navArrows.children( ':first' ).on( 'click', function() {
+						slicebox.next();
+						return false;
+					} );
+					$navArrows.children( ':last' ).on( 'click', function() {
+						slicebox.previous();
+						return false;
+					} );
+				};
+		return { init : init };
+	})();
+	Page.init();
+}
+
 var ww,wh;
 	function init(){
 	  t = 0;
