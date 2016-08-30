@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>MY</title>
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>MY</title>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
 		<link rel="stylesheet" type="text/css" href="css/custom.css" />
-		<style>
-			/*reset*/
+<style>
 			body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hr,blockquote,object,iframe,fieldset,input,legend,form,th,td,span,a{margin:0;padding:0}
 			ul,ol,li{list-style:none}
 			input{outline:none;border:0;}
@@ -20,6 +19,23 @@
 			h3{font-size:25px;}
 			h4{font-size:20px;}
 			.clear{clear:both;}
+			html { overflow: hidden;}
+			body { width: 100%;  *cursor: default;
+			overflow: hidden; font: 16px/1.5 "Microsoft YaHei", Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;}
+			#pageContain { overflow: hidden;}
+			.page { display: none; width: 100%; height: 100%; overflow: hidden; position: absolute; top: 0; left: 0;background:#000;}
+			.page1{background:none;}
+			.contain { width: 100%; height: 100%; display: none; position: relative; z-index: 0;}
+			.current .contain, .slide .contain { display: block;}
+			.current { display: block; z-index: 1;}
+			.slide { display: block; z-index: 2;}
+			.swipe { display: block; z-index: 3; transition-duration: 0ms !important; -webkit-transition-duration: 0ms !important;}
+			#navBar { z-index: 3; position: absolute; top: 40%; right: 3%;}
+			#navBar .active { background: #ccc;}
+			#navBar li { cursor: pointer; margin-bottom: 10px; transition: all .7s ease; border-radius: 50%; line-height: 40px; text-align: center; width: 40px; height: 40px;}
+			
+			.txt { margin-top: 20%; font-size: 50px; color: #fff; text-align: center;}
+
 			.clearfixd:after{
 				content:'\200B';
 				display:block;
@@ -35,24 +51,22 @@
 			 }
 			body{background:#000;color:#fff;}
 			.inner{width:1000px;margin:0 auto;}
-			.title{position:absolute;left:600px;top:400px;font-family: "微软雅黑";}
+			.me{position:absolute;left:400px;top:150px;}
+			.me p{font-size:18px;}
+			.title{position:absolute;left:600px;top:100px;font-family: "微软雅黑";}
 			.title p:nth-child(1){width:1000px;font-size:150px;}
 			.title p:nth-child(2){font-size:100px}
 			.title p{font-size:50px;text-align: right;}	 
-			.main{margin-top:1200px;height:900px;}
 			.iphone{background:url(images/iPhone.png) no-repeat left top;background-size:contain;height:800px;margin:0 50px;float:left;text-align: center;)}
-			
-			 
-		</style>
+</style>
 		<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
 		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
 		<script type="text/javascript" src="js/covervid.min.js" ></script>
-		
 		<script>
-			$(function(){
+			window.onload=function(){
 				
-				for(var i=0;i<$(".me span").length;i++){		
+				for(var i=0;i<$(".me span").length;i++){
 					if(i<10){
 						$(".me span").eq(i).css("animation-delay","0."+i+"s");
 					}else{
@@ -61,92 +75,78 @@
 				};
 				$('.iphone').eq(0).click(function(){window.open("opus/H5rain/rain.html")});
 				$('.iphone').eq(1).click(function(){window.open("opus/H5drama/index.html")});
-				var Page = (function() {
 
-					var $navArrows = $( '#nav-arrows' ).hide(),
-						$shadow = $( '#shadow' ).hide(),
-						slicebox = $( '#sb-slider' ).slicebox( {
-							onReady : function() {
-								$navArrows.show();
-								$shadow.show();
-							},
-							orientation : 'r',
-							cuboidsRandom : true,
-							disperseFactor : 30
-						} ),				
-						init = function() {
-							initEvents();						
-						},
-						initEvents = function() {
-							// add navigation events
-							$navArrows.children( ':first' ).on( 'click', function() {
-								slicebox.next();
-								return false;
-							} );
-							$navArrows.children( ':last' ).on( 'click', function() {							
-								slicebox.previous();
-								return false;
-							} );
-						};
-						return { init : init };
-				})();
-				Page.init();
+
 				
-			})
+			}
 		</script>
-	</head>
-	<body>	
-		<nav></nav>
-		<div class="main inner">
-			<h2>作品展示</h2>
-			<div class="iphone">
-				<iframe width=315 height=560 style="margin:120px 34px;" src="opus/H5rain/rain.html"></iframe> 
-				<p>点击打开新页面预览</p>
-			</div>
-			<div class="iphone">
-				<iframe width=315 height=560 style="margin:120px 34px;" src="opus/H5drama/index.html"></iframe>
-				<p>点击打开新页面预览</p>
+</head>
+
+<body>
+<div id="pageContain">
+	<div class="page page1 current">
+		<div class="contain">
+			
+		</div>
+	</div>
+
+	<div class="page page2 ">
+		<div class="contain">
+			<div class="main inner">
+				<h2>作品展示</h2>
+				<div class="iphone">
+					<iframe width=315 height=560 style="margin:120px 34px;" src="opus/H5rain/rain.html"></iframe> 
+					<p>点击打开新页面预览</p>
+				</div>
+				<div class="iphone">
+					<iframe width=315 height=560 style="margin:120px 34px;" src="opus/H5drama/index.html"></iframe>
+					<p>点击打开新页面预览</p>
+				</div>
 			</div>
 		</div>
-		<div class="wrapper">
-			<ul id="sb-slider" class="sb-slider">
-				<li>
-					<a href="opus/mocha/index.html" target="_blank"><img src="images/1.jpg" alt="image1"/></a>
-					<div class="sb-description">
-							<h3>页面1</h3>
-					</div>
-				</li>
-				<li>
-					<a href="opus/pet/index.html" target="_blank"><img src="images/2.jpg" alt="image2"/></a>
-					<div class="sb-description">
-							<h3>页面2</h3>
-					</div>
-				</li>
-				<li>
-					<a href="opus/store/index.html" target="_blank"><img src="images/3.jpg" alt="image3"/></a>
-					<div class="sb-description">
-							<h3>模拟商城</h3>
-					</div>
-				</li>
-				<li>
-					<a href="opus/webapp/index.html" target="_blank"><img src="images/4.jpg" alt="image4"/></a>
-					<div class="sb-description">
-							<h3>WebApp</h3>
-					</div>
-				</li>
-				<li>
-					<a href="opus/中阔地基/index.html" target="_blank"><img src="images/5.jpg" alt="image5"/></a>
-					<div class="sb-description">
-							<h3>中阔地基官网</h3>
-					</div>
-				</li>
-				<li>
-					<a href="opus/jd/index.html" target="_blank"><img src="images/6.jpg" alt="image5"/></a>
-					<div class="sb-description">
-							<h3>模拟京东</h3>
-					</div>
-				</li>
-			</ul>
+	</div>
+
+	<div class="page page3 container">
+		<div class="contain wrapper">
+				<h2>作品展示</h2>
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="opus/mocha/index.html" target="_blank"><img src="images/1.jpg" alt="image1"/></a>
+						<div class="sb-description">
+								<h3>Mocha个人站</h3>
+						</div>
+					</li>
+					<li>
+						<a href="opus/pet/index.html" target="_blank"><img src="images/2.jpg" alt="image2"/></a>
+						<div class="sb-description">
+								<h3>Pet</h3>
+						</div>
+					</li>
+					<li>
+						<a href="opus/store/index.html" target="_blank"><img src="images/3.jpg" alt="image3"/></a>
+						<div class="sb-description">
+								<h3>模拟商城</h3>
+						</div>
+					</li>
+					<li>
+						<a href="opus/webapp/index.html" target="_blank"><img src="images/4.jpg" alt="image4"/></a>
+						<div class="sb-description">
+								<h3>WebApp</h3>
+						</div>
+					</li>
+					<li>
+						<a href="opus/中阔地基/index.html" target="_blank"><img src="images/5.jpg" alt="image5"/></a>
+						<div class="sb-description">
+								<h3>中阔地基官网</h3>
+						</div>
+					</li>
+					<li>
+						<a href="opus/jd/index.html" target="_blank"><img src="images/6.jpg" alt="image5"/></a>
+						<div class="sb-description">
+								<h3>模拟京东</h3>
+						</div>
+					</li>
+				</ul>
 			<div id="shadow" class="shadow"></div>
 
 			<div id="nav-arrows" class="nav-arrows">
@@ -154,38 +154,79 @@
 				<a href="#">Previous</a>
 			</div>
 		</div>
-		<div class="inner me">
-			<h2>About Me</h2>
-			<div class="D-items">
-				<h3>Details</h3>
-                <h3>电话：13808050320</h3>
-                <h3>邮箱：620002020@qq.com</h3>
-				<p>姓名：罗钒琪　性别：男</p>
-				<p>CET-4　政治面貌：中共党员</p>
-			</div>
-			<div class="D-items">
-				<h3>教育背景</h3>
-				<p>2011.9-2015.6 成都信息工程大学 金融工程</p>
-				<h4>Major</h4>
-				<p>数据库原理及应用-Acces、计算机网络技术及应用、微积分、线性代数与空间解析几何、概率论与数理统计、计量经济学、时间序列分析金融风险管理、数学模型与算法等。</p>
-				<h4>Honor</h4>
-				<p>2011-2012 二等奖学金<br>2012-2013 三等奖学金<br>2013-2014 三等奖学金<br> 2011-2012 学生会优秀干事<br>2012-2013 优秀学生干部 <br>2012-2013 优秀团员<br>2012.6  金融投资模拟交易大赛期货组特等奖<br>2015 优秀毕业生<br></p>
-			</div>
-			<div class="D-items item5">
-				<h3>专业技能</h3>
-				<p>1、熟练掌握W3C标准、ES规范、web语义化，有一定调用API的经验。</p>
-				<p>2、精通HTML(5)、CSS(3)等前端技术。</p>
-				<p>3、精通JavaScript和Ajax技术。</p>
-				<p>4、熟悉框架如MUI、JQuery、AngularJS、ionic、BootStrap。</p>
-				<p>5、熟悉Web app 轻应用、微信公众号。</p>
-			</div>
-		</div>
+	</div>
 
-	</body>
-	<script src='js/stopExecutionOnTimeout.js?t=1'></script>
-	<script src='js/Sprite3D.js'></script>
-	<script>
-	var ww,wh;
+	<!--<div class="page page4">
+		<div class="contain">
+			next page
+		</div>
+	</div>-->
+
+</div>
+
+<ul id="navBar">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+
+<script src="js/fullPage.min.js"></script>
+<script src='js/stopExecutionOnTimeout.js?t=1'></script>
+<script src='js/Sprite3D.js'></script>
+<script>
+var runPage;
+runPage = new FullPage({
+	id: 'pageContain',
+	slideTime: 800,
+	effect: {
+		transform: {
+			translate: 'Y'
+		},
+		opacity: [0, 1]
+	},
+	mode: 'wheel, touch, nav:navBar',
+	easing: 'ease',
+	callback: function(index){
+		if(index==2){
+
+			autoPlay();
+		}
+	}
+});
+function autoPlay(){
+
+	var Page = (function() {
+
+		var $navArrows = $( '#nav-arrows' ).hide(),
+				$shadow = $( '#shadow' ).hide(),
+				slicebox = $( '#sb-slider' ).slicebox( {
+					onReady : function() {
+						$navArrows.show();
+						$shadow.show();
+					},
+					orientation : 'r',
+					cuboidsRandom : true,
+					disperseFactor : 30
+				} ),
+				init = function() {
+					initEvents();
+				},
+				initEvents = function() {
+					$navArrows.children( ':first' ).on( 'click', function() {
+						slicebox.next();
+						return false;
+					} );
+					$navArrows.children( ':last' ).on( 'click', function() {
+						slicebox.previous();
+						return false;
+					} );
+				};
+		return { init : init };
+	})();
+	Page.init();
+}
+
+var ww,wh;
 	function init(){
 	  t = 0;
 	ww = window.innerWidth;
@@ -201,7 +242,31 @@
 				'<p><span>罗</span><span>钒</span><span>琪</span></p>'+
 				'<p><span>的</span></p>'+
 				'<p><span>简</span><span>历</span></p>'+
-			'</div></div>')
+			'</div></div>'+
+	'<div class="me">'+
+			'<h2>About Me</h2>'+
+			'<div class="D-items">'+
+				'<h3>Details</h3>'+
+                '<h3>电话：13808050320</h3>'+
+                '<h3>邮箱：620002020@qq.com</h3>'+
+				'<p>姓名：罗钒琪　性别：男</p>'+
+				'<p>CET-4　政治面貌：中共党员</p>'+
+			'</div>'+
+			'<div class="D-items">'+
+				'<h3>教育背景</h3>'+
+				'<p>2011.9-2015.6 成都信息工程大学 金融工程</p>'+
+				'<h4>Honor</h4>'+
+				'<p>2011-2012 二等奖学金<br>2012-2013 三等奖学金<br>2013-2014 三等奖学金<br> 2011-2012 学生会优秀干事<br>2012-2013 优秀学生干部 <br>2012-2013 优秀团员<br>2012.6  金融投资模拟交易大赛期货组特等奖<br>2015 优秀毕业生<br></p>'+
+			'</div>'+
+			'<div class="D-items item5">'+
+				'<h3>专业技能</h3>'+
+				'<p>1、熟练掌握W3C标准、ES规范、web语义化，有一定调用API的经验。</p>'+
+				'<p>2、精通HTML(5)、CSS(3)等前端技术。</p>'+
+				'<p>3、精通JavaScript和Ajax技术。</p>'+
+				'<p>4、熟悉框架如MUI、JQuery、AngularJS、ionic、BootStrap。</p>'+
+				'<p>5、熟悉Web app 轻应用、微信公众号。</p>'+
+			'</div>'+
+		'</div>')
 
 	var x,y,z,w;
 
@@ -239,5 +304,7 @@
 //	  $("body").empty();
 	  init();
 	};
-	</script>
+</script>
+
+</body>
 </html>
